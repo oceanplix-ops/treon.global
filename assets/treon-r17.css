@@ -1,0 +1,651 @@
+body.treon-request{--navy:#06264d;--teal:#75ddd6;--ink:#304d62;--line:#d6e3eb}
+body.treon-request *{box-sizing:border-box}
+html:has(body.treon-request){scroll-behavior:smooth}
+body.treon-request{margin:0;background:#f4f7fa;color:var(--ink);font:17px/1.6 Arial,Helvetica,sans-serif}
+body.treon-request a{color:#075984;text-underline-offset:3px}
+body.treon-request header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px max(20px,6vw);background:white;border-bottom:1px solid var(--line)}
+body.treon-request .brand img{display:block;width:130px;height:auto}
+body.treon-request nav{display:flex;gap:4px;flex-wrap:wrap}
+body.treon-request nav a{display:grid;place-items:center;min-width:44px;min-height:44px;text-decoration:none;border:1px solid transparent;border-radius:7px;font-size:14px;font-weight:700}
+body.treon-request nav a[aria-current]{background:var(--navy);color:#fff}
+body.treon-request .wrap{width:min(1120px,calc(100% - 40px));margin-inline:auto}
+body.treon-request .hero{background:var(--navy);color:#fff;padding:55px 0 44px}
+body.treon-request .eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;color:var(--teal)}
+body.treon-request h1{font-size:clamp(34px,5vw,58px);line-height:1.08;letter-spacing:-.03em;margin:18px 0;max-width:850px}
+body.treon-request .intro{max-width:750px;color:#dce9f2;font-size:20px}
+body.treon-request .steps{display:flex;flex-wrap:wrap;gap:12px 36px;padding:0;list-style:none;counter-reset:steps;margin-top:30px;font-size:14px}
+body.treon-request .steps li{counter-increment:steps}
+body.treon-request .steps li:before{content:'0' counter(steps);font-weight:bold;color:var(--teal);margin-right:10px}
+body.treon-request .content{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(0,1fr);gap:36px;align-items:start;padding-block:40px}
+body.treon-request .form-card{background:white;border:1px solid var(--line);border-radius:16px;padding:30px}
+body.treon-request .note{border-left:3px solid #12818d;padding-left:16px;font-size:15px;margin-top:0}
+body.treon-request .required,body.treon-request .hint{font-size:13px;color:#4f6473}
+body.treon-request .fields{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+body.treon-request label{display:block;font-weight:700;font-size:15px}
+body.treon-request input,body.treon-request textarea{display:block;width:100%;margin:7px 0 18px;padding:12px;border:1px solid #849bac;border-radius:7px;background:#fff;color:#102b45;font:16px/1.45 Arial,sans-serif}
+body.treon-request textarea{resize:vertical;min-height:130px}
+body.treon-request .check{display:flex;align-items:start;gap:12px;font-size:14px;font-weight:400;margin:22px 0}
+body.treon-request .check input{width:20px;height:20px;flex:none;margin:2px 0}
+body.treon-request .check span{min-width:0}
+body.treon-request fieldset{border:0;padding:0;margin:0;min-width:0}
+body.treon-request button{min-height:48px;border:1px solid var(--navy);border-radius:8px;padding:12px 18px;background:white;color:var(--navy);font:700 15px/1.4 Arial,sans-serif;cursor:pointer}
+body.treon-request .primary{background:var(--navy);color:#fff;display:block;margin-top:18px;width:100%}
+body.treon-request button:disabled{opacity:.55;cursor:not-allowed}
+body.treon-request fieldset:disabled{opacity:.65}
+body.treon-request #challenge{margin-top:14px;min-width:0}
+body.treon-request #form-status{font-size:15px;padding:12px 14px;background:#edf4f8;border-radius:8px}
+body.treon-request #form-status[data-state=success]{background:#e5f4e9;color:#185c32}
+body.treon-request #form-status[data-state=error]{background:#fff0e9;color:#88331b}
+body.treon-request aside{font-size:14px;padding-top:6px}
+body.treon-request h2{font-size:23px;line-height:1.3;color:var(--navy)}
+body.treon-request footer{display:flex;flex-wrap:wrap;gap:12px 24px;border-top:1px solid var(--line);padding-block:24px;font-size:13px}
+body.treon-request .honeypot,body.treon-request .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+body.treon-request .skip-link{position:absolute;top:-100px;padding:10px;background:white;z-index:20}
+body.treon-request .skip-link:focus{top:8px}
+body.treon-request a:focus-visible,body.treon-request button:focus-visible,body.treon-request input:focus-visible,body.treon-request textarea:focus-visible{outline:3px solid #bd7a00;outline-offset:3px}
+body.treon-request #privacy{scroll-margin-top:20px}
+@media(max-width:760px){body.treon-request .content{grid-template-columns:1fr;gap:18px;padding-top:24px}
+body.treon-request .hero{padding:30px 0}
+body.treon-request .form-card{padding:22px}
+body.treon-request .steps{display:grid;gap:10px}
+body.treon-request header{flex-wrap:wrap;gap:12px}
+body.treon-request .intro{font-size:18px}}
+@media(max-width:420px){body.treon-request .fields{grid-template-columns:1fr;gap:0}
+body.treon-request .form-card{padding:18px}
+body.treon-request .wrap{width:calc(100% - 28px)}
+body.treon-request header{padding:14px}
+body.treon-request .hero h1{font-size:34px}
+body.treon-request nav{gap:0}}
+@media(prefers-reduced-motion:reduce){html:has(body.treon-request){scroll-behavior:auto}}
+body.treon-request .email-enquiry-box{margin:22px 0;padding:20px;border:1px solid #b7cedf;border-radius:10px;background:#f3f8fb;color:#002f6c}
+body.treon-request .email-enquiry-box p{color:#002f6c}
+body.treon-request .email-enquiry{display:inline-block;padding:12px 18px;border-radius:7px;background:#002f6c;color:#fff!important;text-decoration:none;font-weight:700}
+body.treon-request .email-enquiry:focus-visible{outline:3px solid #00a79d;outline-offset:4px}
+/* TREON shared navigation and compact editorial sections · 21 October 2026 */
+:root{--tr-navy:#082b4c;--tr-ink:#102b45;--tr-teal:#087c83;--tr-line:#d6e3eb}
+html{scroll-padding-top:110px}body{overflow-x:clip}body>header.treon-unified-header{position:sticky!important;top:0!important;inset-inline:0!important;z-index:100!important;display:flex!important;align-items:center!important;justify-content:space-between!important;flex-wrap:nowrap!important;gap:20px!important;width:100%!important;height:auto!important;min-height:84px!important;padding:17px 4vw!important;background:#fff!important;color:var(--tr-ink)!important;border-bottom:1px solid var(--tr-line)!important;box-shadow:0 3px 16px #082b4c0a!important;transform:none!important;overflow:visible!important;line-height:1.3!important}
+.treon-unified-header .treon-brand{flex:0 0 130px!important;display:block!important;margin:0!important;line-height:0!important}.treon-unified-header .treon-brand img{display:block!important;width:130px!important;height:auto!important;filter:none!important;max-width:100%!important}
+.treon-unified-header #nav{display:flex!important;align-items:center!important;justify-content:center!important;flex:1 1 auto!important;gap:22px!important;position:static!important;width:auto!important;max-height:none!important;overflow:visible!important;margin:0!important;padding:0!important;transform:none!important;background:transparent!important;flex-wrap:nowrap!important;order:0!important}
+.treon-unified-header #nav a{display:block!important;flex:0 0 auto!important;min-width:0!important;min-height:0!important;padding:10px 0!important;font:600 13px/1.4 "Inter",Arial,sans-serif!important;color:var(--tr-ink)!important;text-decoration:none!important;text-transform:none!important;letter-spacing:0!important;border:0!important;white-space:nowrap!important;opacity:1!important}
+.treon-unified-header #nav a:hover,.treon-unified-header #nav a[aria-current]{color:var(--tr-teal)!important}
+.treon-unified-header>.treon-language-nav{display:block!important;flex:0 0 auto!important;position:static!important;order:0!important;width:auto!important;min-height:0!important;overflow:visible!important;margin:0!important;padding:0!important;gap:0!important}
+.treon-unified-header select{display:block!important;width:112px!important;min-height:42px!important;margin:0!important;padding:8px!important;border:1px solid #b5c7d4!important;border-radius:6px!important;background:#fff!important;color:var(--tr-ink)!important;font:500 13px/1.4 "Inter",Arial,sans-serif!important}
+.treon-unified-header>.treon-header-cta{display:inline-flex!important;align-items:center!important;justify-content:center!important;flex:0 0 auto!important;min-height:43px!important;padding:10px 17px!important;border:1px solid var(--tr-navy)!important;border-radius:6px!important;background:var(--tr-navy)!important;color:#fff!important;text-decoration:none!important;font:650 13px/1.4 "Inter",Arial,sans-serif!important;white-space:nowrap!important}
+.treon-unified-header>.treon-menu-toggle{display:none!important;position:static!important;width:42px!important;height:42px!important;min-height:42px!important;border:1px solid #b5c7d4!important;border-radius:6px!important;background:#fff!important;padding:10px!important;cursor:pointer!important}.treon-menu-toggle span{display:block!important;height:2px!important;background:var(--tr-navy)!important;margin:4px 0!important}
+.treon-unified-header a:focus-visible,.treon-unified-header button:focus-visible,.treon-unified-header select:focus-visible{outline:3px solid #087c83!important;outline-offset:3px!important}
+.treon-section-wrap{width:min(1240px,92%);margin:0 auto}.treon-project-overview{background:#f2f7fa;color:var(--tr-ink);padding:40px 0 42px}.treon-project-overview h2{font-size:clamp(25px,3vw,34px);line-height:1.2;margin:0 0 24px;color:var(--tr-ink)}.treon-eyebrow{font:650 12px/1.5 "Inter",Arial,sans-serif;color:var(--tr-teal);margin:0 0 10px;letter-spacing:.03em}.treon-project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.treon-project-grid article{background:#fff;border:1px solid var(--tr-line);border-top:3px solid var(--tr-teal);border-radius:8px;padding:23px}.treon-project-grid article>span{font-size:12px;font-weight:650;color:var(--tr-teal)}.treon-project-grid h3{margin:10px 0;font-size:19px;line-height:1.3;color:var(--tr-ink)}.treon-project-grid p{margin:0;font-size:15px;line-height:1.65;color:#4d6275}.treon-text-link{display:inline-block;color:var(--tr-teal);font-weight:650;margin-top:20px;text-underline-offset:4px}.treon-team{margin-top:36px;border-top:1px solid var(--tr-line);padding-top:28px}.treon-team>h3{margin:0 0 18px;font-size:22px;color:var(--tr-ink)}.treon-team-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.treon-team-grid article{padding:18px;background:#f5f8fb;border:1px solid var(--tr-line);border-radius:7px}.treon-team-grid h4{font-size:17px;margin:0 0 8px;color:var(--tr-ink)}.treon-team-grid p{font-size:14px;line-height:1.5;color:#4d6275;margin:0}.treon-caption{font-size:12px!important;line-height:1.6!important;color:#5b7182!important;margin-top:14px!important}
+.treon-home .company-services-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}.treon-home .entry-copy{padding-top:46px!important;padding-bottom:40px!important}.treon-home .entry-copy h1{font-size:clamp(32px,3.5vw,54px)!important;line-height:1.12!important}.treon-home .entry-copy>p{font-size:17px!important;line-height:1.7!important}.treon-home .entry-copy .entry-pillars{margin-top:26px!important}.treon-home .home-paths{padding-top:30px!important;padding-bottom:30px!important}.treon-home .industry-invite{padding-top:42px!important;padding-bottom:42px!important}.treon-home .company-overview{padding-top:48px!important;padding-bottom:48px!important}.treon-thailand-next{border-left:3px solid var(--tr-teal);padding:4px 0 4px 20px;margin-top:22px;color:#304e65}.treon-thailand-next h3{font-size:20px}.treon-home .franchise-system{padding-top:46px!important;padding-bottom:46px!important}
+body.treon-request .email-enquiry-box{margin:26px 0 0;padding:20px;border:1px solid var(--tr-line);border-radius:8px;background:#f3f8fb}body.treon-request .email-enquiry-box h3{margin:0 0 8px;font-size:20px}body.treon-request .email-enquiry-box p{margin:0 0 14px}body.treon-request .email-enquiry{display:inline-block;padding:11px 17px;border-radius:6px;background:var(--tr-navy);color:#fff!important;text-decoration:none;font-weight:650}
+@media(max-width:1239px){body>header.treon-unified-header{gap:14px!important}.treon-unified-header #nav{display:none!important;position:absolute!important;inset:100% 0 auto 0!important;width:100%!important;padding:16px 5vw 24px!important;background:#fff!important;box-shadow:0 10px 15px #082b4c12!important;border-bottom:1px solid var(--tr-line)!important;max-height:calc(100dvh - 90px)!important;overflow:auto!important;flex-direction:column!important;align-items:stretch!important;gap:2px!important}.treon-unified-header.menu-open #nav{display:flex!important}.treon-unified-header #nav a{padding:12px 0!important;font-size:16px!important}.treon-unified-header>.treon-language-nav{margin-left:auto!important}.treon-unified-header>.treon-menu-toggle{display:block!important;flex-shrink:0!important}}
+@media(max-width:760px){html{scroll-padding-top:84px}body>header.treon-unified-header{min-height:74px!important;padding:14px 5vw!important;gap:10px!important}.treon-unified-header .treon-brand{flex-basis:104px!important}.treon-unified-header .treon-brand img{width:104px!important}.treon-unified-header select{width:101px!important;min-height:40px!important}.treon-unified-header>.treon-header-cta{display:none!important}.treon-unified-header #nav{max-height:calc(100dvh - 74px)!important}.treon-project-grid,.treon-home .company-services-grid{grid-template-columns:1fr!important}.treon-team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.treon-project-overview{padding:30px 0}.treon-home .entry-copy{padding-top:30px!important;padding-bottom:30px!important}.treon-home .entry-copy h1{font-size:clamp(29px,7.3vw,40px)!important}.treon-home .industry-invite{padding-top:30px!important;padding-bottom:30px!important}.treon-team-grid article{padding:15px}.treon-team-grid h4{font-size:15px}.treon-team-grid p{font-size:13px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+@media(min-width:1240px){.treon-unified-header #nav a.treon-menu-enquiry{display:none!important}}
+
+.treon-visual-note{position:absolute;bottom:12px;left:16px;right:16px;z-index:3;margin:0;padding:9px 12px;border-radius:5px;background:#082b4ce8;color:#fff;font-size:11px;line-height:1.5}
+
+body.treon-request #prepare-email{margin:16px 0;background:#082b4c;color:white;cursor:pointer}body.treon-request #prepared-email{border-top:1px solid #d6e3eb;margin-top:18px;padding-top:18px}body.treon-request #prepared-email[hidden]{display:none!important}body.treon-request #email-preview{font:14px/1.6 Arial,sans-serif;min-height:230px}body.treon-request #prepared-email p{padding:12px;background:#eef5f9;border-left:3px solid #087c83}
+
+/* Release R4: concise partner FAQ and release date */
+.treon-faq{padding:44px 0;background:#f5f8fb;color:#102b45}.treon-faq h2{font-size:clamp(25px,3vw,34px);line-height:1.25;margin:0 0 24px;color:#102b45}.treon-faq details{background:white;border:1px solid #d6e3eb;border-radius:7px;margin:0 0 10px;padding:0 21px}.treon-faq summary{font-size:17px;font-weight:650;cursor:pointer;padding:18px 0;line-height:1.5}.treon-faq summary:focus-visible{outline:3px solid #087c83;outline-offset:4px}.treon-faq details p{max-width:920px;font-size:15px;line-height:1.75;color:#4d6275;margin:0 0 20px}.treon-faq-cta{display:inline-block;margin-top:17px;padding:13px 20px;border-radius:6px;background:#082b4c;color:white!important;text-decoration:none;font-weight:650}.treon-release-note{display:block;flex-basis:100%;padding-top:12px;font-size:11px;line-height:1.6;opacity:.85}.treon-version{font-family:Arial,sans-serif;color:#102b45;max-width:700px;margin:7vh auto;padding:28px}.treon-version h1{font-size:30px}.treon-version img{width:160px;height:auto}.treon-version code{display:block;background:#eef5f9;padding:20px;font-size:22px;margin:24px 0}.treon-version a{color:#087c83}@media(max-width:760px){.treon-faq{padding:30px 0}.treon-faq details{padding:0 16px}.treon-faq summary{font-size:16px}.treon-faq details p{font-size:14px}}
+
+/* R4: explicit sizing prevents legacy header sizing from clipping navigation. */
+body>header.treon-unified-header,body>header.treon-unified-header *{box-sizing:border-box!important}body>header.treon-unified-header{max-width:100vw!important}.treon-unified-header #nav{min-width:0!important}
+
+/* R6 editorial and visual refinement, 23 October 2026 */
+@font-face{font-family:Inter;font-style:normal;font-weight:100 900;font-display:swap;src:url('/assets/inter-variable.woff2') format('woff2')}
+.treon-r6{font-family:Inter,Arial,sans-serif}.treon-r6 h1,.treon-r6 h2,.treon-r6 h3,.treon-r6 h4,.treon-r6 summary{font-family:Inter,Arial,sans-serif;text-wrap:balance}.treon-r6 h1{letter-spacing:-.035em!important}.treon-r6 h2{letter-spacing:-.022em;line-height:1.2}.treon-r6 h3{line-height:1.3}.treon-r6 p{overflow-wrap:break-word}.treon-r6 .entry-copy h1{font-size:clamp(34px,3.65vw,58px)!important;line-height:1.09!important;max-width:780px!important}.treon-r6 .entry-lead{max-width:66ch!important;font-size:17px!important;line-height:1.65!important}.treon-r6 .company-overview-intro,.treon-r6 .benefit-lead,.treon-r6 .franchise-head>p,.treon-r6 .lead,.treon-r6 .intro{max-width:72ch;line-height:1.7}.treon-r6 .industry-partner-invite{padding-top:44px;padding-bottom:44px}.treon-r6 .company-overview{padding-top:50px;padding-bottom:50px}.treon-r6 .company-overview h2,.treon-r6 .franchise-head h2{font-size:clamp(28px,3vw,40px)!important;line-height:1.15!important}.treon-r6 .cirpal-update{padding-top:44px;padding-bottom:44px}.treon-r6 .cirpal-update h2{max-width:25ch}.treon-r6 .cirpal-update p{max-width:80ch}.treon-r6 .cirpal-update-inner{max-width:1120px}.treon-r6 .home-role-details{margin-top:24px;border-top:1px solid #315472;padding-top:18px}.treon-r6 .home-role-details summary{font-weight:650;cursor:pointer;line-height:1.5}.treon-r6 details>summary:focus-visible{outline:3px solid #1ca9ad;outline-offset:5px;border-radius:3px}.treon-r6 .treon-team-grid article,.treon-r6 .treon-project-grid article{box-shadow:0 4px 15px #06264d06}.treon-r6 .pro-table{font-variant-numeric:tabular-nums}.treon-r6 .pro-disclosure summary{font-size:15px;line-height:1.5}.treon-r6 .pro-disclosure-content p{font-size:15px;line-height:1.7}.treon-r6 .pro-footnote,.treon-r6 .roadmap-note,.treon-r6 .story-note{line-height:1.65!important}.treon-r6 .franchise-capacity p{font-size:15px!important;line-height:1.65!important}.treon-r6 .treon-faq summary{min-height:52px;align-content:center}.treon-r6 .treon-contact-copy h2{max-width:22ch}.treon-r6 .treon-contact-copy p{line-height:1.7!important}.treon-r6 .treon-version-label{font-size:11px;letter-spacing:.04em}body.treon-request,body.treon-request input,body.treon-request textarea,body.treon-request button{font-family:Inter,Arial,sans-serif}
+@media(max-width:760px){.treon-r6 .entry-copy{padding-top:32px!important;padding-bottom:32px!important}.treon-r6 .entry-copy h1{font-size:clamp(32px,8.4vw,42px)!important;line-height:1.12!important;letter-spacing:-.025em!important}.treon-r6 .entry-lead{font-size:16px!important;line-height:1.65!important}.treon-r6 h2{font-size:clamp(25px,6.6vw,34px)!important}.treon-r6 .cirpal-update{padding:32px 20px}.treon-r6 .cirpal-update h2{max-width:none}.treon-r6 .treon-team-grid article{padding:16px}.treon-r6 .company-overview{padding-top:34px;padding-bottom:34px}.treon-r6 .industry-partner-invite{padding-top:32px;padding-bottom:32px}}
+html:lang(zh) .treon-r6,html:lang(zh) .treon-r6 h1,html:lang(zh) .treon-r6 h2,html:lang(zh) .treon-r6 h3,html:lang(zh) .treon-r6 summary{font-family:Inter,'PingFang SC','Microsoft YaHei',sans-serif;letter-spacing:0!important}
+
+/* R6 balanced Thailand project and carbon sections */
+#sinnovation.proof-action-redesign{padding:52px 24px!important;background:#06264d!important;color:#fff!important;min-height:0!important;height:auto!important}
+#sinnovation>.wrap{width:100%!important;max-width:1120px!important;margin:auto!important;padding:0!important}
+#sinnovation .r6-project-heading{max-width:1020px;margin:0 0 28px;padding:0;border:0;background:transparent}
+#sinnovation .r6-project-heading .project-badge{color:#65d5cc!important;font-size:12px!important;letter-spacing:.07em!important;margin-bottom:12px!important}
+#sinnovation .r6-project-heading h2{font-size:clamp(28px,3vw,42px)!important;line-height:1.16!important;max-width:900px!important;margin:0 0 16px!important;color:#fff!important;letter-spacing:-.025em!important}
+#sinnovation .r6-project-heading .lead{max-width:94ch!important;font-size:16px!important;line-height:1.65!important;color:#e2edf5!important;margin:0!important}
+#sinnovation .r6-project-grid{display:grid!important;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)!important;gap:28px!important;align-items:stretch!important;margin:0!important}
+#sinnovation .r6-project-grid>*{min-width:0!important;margin:0!important;position:static!important;inset:auto!important;transform:none!important;float:none!important;width:auto!important;max-width:100%!important}
+#sinnovation .r6-project-grid .final-royce-figure{display:flex!important;flex-direction:column!important;overflow:hidden!important;border:1px solid #315472!important;border-radius:12px!important;background:#082d53!important;box-shadow:none!important;align-self:stretch!important;height:auto!important}
+#sinnovation .r6-project-grid video{width:100%!important;height:auto!important;aspect-ratio:16/9!important;display:block!important;position:static!important;object-fit:contain!important;border-radius:0!important;background:#fff!important;margin:0!important;max-height:none!important}
+#sinnovation .r6-project-grid figcaption{display:block!important;position:static!important;background:#082d53!important;color:#e2edf5!important;padding:18px 22px!important;margin:0!important;height:auto!important;flex:1!important}
+#sinnovation .r6-project-grid figcaption strong{color:#65d5cc!important;font-size:15px!important;display:block!important;margin:0 0 6px!important}
+#sinnovation .r6-project-grid figcaption p{font-size:13px!important;line-height:1.5!important;color:#e2edf5!important;margin:0 0 8px!important}
+#sinnovation .r6-project-grid figcaption a{display:inline-block!important;color:#e2edf5!important;margin:4px 18px 4px 0!important;font-size:13px!important;line-height:1.5!important}
+#sinnovation .r6-project-status{display:flex!important;flex-direction:column!important;border:1px solid #315472!important;border-radius:12px!important;background:#082d53!important;padding:26px!important;box-shadow:none!important}
+#sinnovation .r6-project-status h3{font-size:22px!important;line-height:1.3!important;color:#fff!important;margin:0 0 12px!important}
+#sinnovation .r6-project-status>p{font-size:14px!important;line-height:1.5!important;color:#c8dfec!important;margin:0 0 12px!important}
+#sinnovation .r6-project-conditions{list-style:none!important;padding:0!important;margin:0 0 20px!important;display:grid!important;grid-template-columns:1fr 1fr!important;gap:12px!important}
+#sinnovation .r6-project-conditions li{font-size:14px!important;line-height:1.4!important;background:#103758!important;border:1px solid #315472!important;border-left:3px solid #65d5cc!important;border-radius:5px!important;padding:13px 12px!important;min-width:0!important;color:#fff!important}
+#sinnovation .r6-project-status>a{display:inline-flex!important;align-items:center!important;min-height:40px!important;padding:8px 0!important;margin:0!important;background:transparent!important;border:0!important;border-radius:0!important;color:#65d5cc!important;font-size:14px!important;line-height:1.5!important;text-decoration:underline!important;box-shadow:none!important}
+#circularenergy.gc-home-summary{padding:50px 24px!important;background:#f3f7fa!important;min-height:0!important;height:auto!important}
+#circularenergy>.gc-inner{max-width:1120px!important;width:100%!important;margin:auto!important;background:#06264d!important;padding:32px!important;border-radius:14px!important;border:1px solid #315472!important;color:#fff!important}
+#circularenergy .gc-kicker{color:#65d5cc!important;font-size:12px!important;letter-spacing:.06em!important;margin:0 0 12px!important}
+#circularenergy .r6-carbon-heading{padding:0 0 24px!important;border-bottom:1px solid #315472!important;margin-bottom:24px!important}
+#circularenergy .r6-carbon-heading h2{font-size:clamp(27px,2.9vw,39px)!important;line-height:1.18!important;color:#fff!important;margin:0 0 14px!important;max-width:900px!important}
+#circularenergy .r6-carbon-heading p{color:#e2edf5!important;font-size:16px!important;line-height:1.65!important;margin:0!important;max-width:96ch!important}
+#circularenergy .r6-carbon-grid{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:32px!important;align-items:start!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;border-radius:0!important;min-height:0!important}
+#circularenergy .r6-carbon-grid>div,#circularenergy .r6-carbon-grid>figure{margin:0!important;padding:0!important;align-self:start!important;min-width:0!important}
+#circularenergy .pro-home-paths{display:grid!important;grid-template-columns:1fr!important;gap:12px!important;margin:0!important;padding:0!important;border:0!important}
+#circularenergy .pro-home-paths>div{display:grid!important;grid-template-columns:30px minmax(0,1fr)!important;gap:4px 12px!important;align-items:center!important;padding:17px!important;background:#103758!important;border:1px solid #315472!important;border-radius:8px!important;margin:0!important;min-height:84px!important}
+#circularenergy .pro-home-paths .pro-icon{grid-row:1/3!important;width:26px!important;height:26px!important;color:#65d5cc!important;position:static!important;margin:0!important}
+#circularenergy .pro-home-paths strong{grid-column:2!important;color:#65d5cc!important;font-size:15px!important;line-height:1.4!important}
+#circularenergy .pro-home-paths span{grid-column:2!important;color:#e2edf5!important;font-size:14px!important;line-height:1.5!important}
+#circularenergy .r6-carbon-grid>figure>img{display:block!important;width:100%!important;height:auto!important;aspect-ratio:16/9!important;object-fit:cover!important;border-radius:8px!important;max-height:none!important}
+#circularenergy .r6-carbon-grid figcaption{color:#c8dfec!important;font-size:12px!important;line-height:1.5!important;margin:8px 0 12px!important;padding:0!important;background:transparent!important;position:static!important}
+#circularenergy .gc-partner-link{display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:space-between!important;gap:16px!important;background:white!important;border-radius:7px!important;padding:13px 18px!important;min-height:68px!important;margin:0!important;color:#06264d!important}
+#circularenergy .gc-partner-link img{width:210px!important;max-width:62%!important;height:auto!important;object-fit:contain!important;margin:0!important;padding:0!important;border-radius:0!important}
+#circularenergy .gc-partner-link span{font-size:11px!important;line-height:1.4!important;color:#06264d!important;text-align:right!important}
+#circularenergy .r6-carbon-footer{display:grid!important;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr)!important;gap:10px 28px!important;border-top:1px solid #315472!important;margin-top:26px!important;padding-top:20px!important;align-items:start!important}
+#circularenergy .r6-carbon-footer .gc-note{grid-row:1/3!important;font-size:14px!important;line-height:1.65!important;color:#e2edf5!important;margin:0!important}
+#circularenergy .r6-carbon-footer .gc-status-line{font-size:12px!important;line-height:1.5!important;color:#c8dfec!important;margin:0!important}
+#circularenergy .r6-carbon-footer .gc-links{margin:0!important;padding:0!important}
+#circularenergy .r6-carbon-footer a{color:#65d5cc!important;font-size:14px!important;line-height:1.5!important}
+@media(max-width:760px){#sinnovation.proof-action-redesign,#circularenergy.gc-home-summary{padding:34px 20px!important}#sinnovation .r6-project-grid,#circularenergy .r6-carbon-grid,#circularenergy .r6-carbon-footer{grid-template-columns:1fr!important;gap:22px!important}#sinnovation .r6-project-heading{margin-bottom:24px!important}#sinnovation .r6-project-status{padding:22px!important}#sinnovation .r6-project-conditions{gap:10px!important}#sinnovation .r6-project-conditions li{padding:12px 10px!important}#circularenergy>.gc-inner{padding:24px 20px!important}#circularenergy .r6-carbon-footer .gc-note{grid-row:auto!important}#circularenergy .gc-partner-link{padding:12px!important}#circularenergy .gc-partner-link img{max-width:58%!important}#circularenergy .r6-carbon-heading p{font-size:15px!important}#circularenergy .r6-carbon-heading{padding-bottom:20px!important;margin-bottom:20px!important}}
+
+#sinnovation .r6-project-status>a{opacity:1!important;justify-content:flex-start!important;align-self:flex-start!important;text-align:left!important;width:auto!important;color:#65d5cc!important}
+
+#app #circularenergy.gc-home-summary .gc-layout.r6-carbon-grid{padding:0!important;width:100%!important;max-width:none!important;background:transparent!important;border:0!important}#app #circularenergy .pro-home-paths{width:100%!important;max-width:none!important}
+
+/* R7: source imagery, process flow and development diagrams */
+:is(#app,body) #sbenefits .r7-process-gallery{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:18px!important}
+:is(#app,body) #sbenefits .r7-process-gallery figure{margin:0!important;min-width:0!important;position:relative;overflow:visible!important;background:#fff!important;border:1px solid #d9e5eb!important;border-radius:14px!important}
+:is(#app,body) #sbenefits .r7-process-gallery img{width:100%!important;height:200px!important;object-fit:cover!important;border-radius:13px 13px 0 0!important}
+:is(#app,body) #sbenefits .r7-process-gallery .r7-machine-card img{object-fit:contain!important;padding:12px!important;box-sizing:border-box;background:#eaf2f5!important}
+:is(#app,body) #sbenefits .r7-process-gallery figcaption{position:static!important;background:transparent!important;padding:20px 16px!important;min-height:130px;box-sizing:border-box;color:#06264d!important}
+:is(#app,body) #sbenefits .r7-process-gallery figcaption strong,:is(#app,body) #sbenefits .r7-process-gallery figcaption span,:is(#app,body) #sbenefits .r7-process-gallery figcaption em{color:#06264d!important;text-shadow:none!important}
+:is(#app,body) #sbenefits .r7-process-gallery figcaption strong{font-size:13px!important;letter-spacing:.04em!important;display:block!important;margin-bottom:9px!important}
+:is(#app,body) #sbenefits .r7-process-gallery figcaption span{font-size:14px!important;line-height:1.55!important;display:block!important}
+:is(#app,body) #sbenefits .r7-process-gallery figure:not(:last-child)::after{content:'→';position:absolute;z-index:2;right:-19px;top:91px;font-size:22px;font-weight:700;color:#087f87;background:#f0f6f8;border-radius:50%;width:25px;text-align:center}
+.r7-source{font-size:12px!important;line-height:1.5!important;display:inline-block!important;margin:10px 0!important;color:#146b7e!important;text-decoration:underline!important;text-underline-offset:3px}
+:is(#app,body) .r7-machine-hero{padding:24px!important;background:#eaf2f5!important;border-radius:18px!important;overflow:hidden!important}
+:is(#app,body) .r7-machine-hero img{height:auto!important;width:100%!important;max-height:420px!important;object-fit:contain!important;background:transparent!important;border-radius:0!important}
+:is(#app,body) .r7-machine-hero .treon-visual-note{position:static!important;inset:auto!important;color:#274963!important;background:transparent!important;text-shadow:none!important;font-size:12px!important;line-height:1.6!important;padding:12px 0 0!important;margin:0!important}
+:is(#app,body) .r7-development-proof{background:#fff!important;border-radius:14px!important;overflow:hidden!important}
+:is(#app,body) .r7-development-proof img{height:280px!important;width:100%!important;object-fit:cover!important;object-position:center 65%!important}
+:is(#app,body) .r7-development-proof figcaption,:is(#app,body) .r7-development-proof .r7-source{padding:0 16px!important}
+:is(#app,body) .r7-roadmap .treon-project-grid{position:relative;gap:24px!important}
+:is(#app,body) .r7-roadmap .treon-project-grid article{position:relative;padding-top:65px!important;border-top:3px solid #58c8c0!important}
+:is(#app,body) .r7-roadmap .treon-project-grid article::before{content:attr(data-step);position:absolute;left:24px;top:18px;color:#087f87;font-size:23px;font-weight:800;line-height:1}
+:is(#app,body) .r7-roadmap .treon-project-grid article:not(:last-child)::after{content:'→';position:absolute;right:-22px;top:20px;color:#087f87;font-size:24px;z-index:1}
+:is(#app,body) .r7-lifecycle{clear:both;margin:26px 0!important;padding:24px!important;background:#0b365e!important;border:1px solid #3d6885!important;border-radius:14px!important;color:#fff!important;max-width:100%!important;box-sizing:border-box}
+:is(#app,body) .r7-lifecycle figcaption{font-size:17px!important;color:white!important;font-weight:700;margin-bottom:20px!important}
+:is(#app,body) .r7-lifecycle ol{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));padding:0!important;margin:0!important;gap:18px;list-style:none!important}
+:is(#app,body) .r7-lifecycle li{padding:0!important;margin:0!important;position:relative;display:flex;flex-direction:column;gap:12px;color:white!important}
+:is(#app,body) .r7-lifecycle li>span{display:grid;place-items:center;border:1px solid #65d5cc;border-radius:50%;width:36px;height:36px;font-size:13px;font-weight:700;color:#65d5cc!important}
+:is(#app,body) .r7-lifecycle li:not(:last-child)::after{content:'→';position:absolute;top:5px;left:65%;font-size:22px;color:#65d5cc}
+:is(#app,body) .r7-lifecycle strong{font-size:14px!important;line-height:1.5;color:#fff!important}
+:is(#app,body) .r7-lifecycle p{color:#c6dce7!important;font-size:12px!important;line-height:1.6!important;margin:20px 0 0!important;max-width:none!important}
+:is(#app,body) .r7-franchise-machine{float:right;width:43%;margin:0 0 28px 36px;padding:18px;box-sizing:border-box;background:#eaf2f5;border:1px solid #d5e4ea;border-radius:16px}
+:is(#app,body) .r7-franchise-machine img{width:100%!important;height:auto!important;object-fit:contain!important}
+:is(#app,body) .r7-franchise-machine figcaption{font-size:12px!important;line-height:1.65!important;color:#274963!important;margin-top:12px}
+:is(#app,body) .r7-investment .investment-grid{clear:both}
+:is(#app,body) .r7-capacity-chart{clear:both;margin:30px 0 0!important;padding:28px!important;border-radius:16px;background:#06264d;color:#fff;box-sizing:border-box}
+:is(#app,body) .r7-capacity-chart figcaption{color:#fff!important;font-size:20px;font-weight:700}
+:is(#app,body) .r7-capacity-chart p{font-size:12px!important;color:#c6dce7!important;margin:8px 0 0!important}
+:is(#app,body) .r7-capacity-chart ol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding:24px 0!important;margin:0!important;list-style:none}
+:is(#app,body) .r7-capacity-chart li{display:flex;flex-direction:column;gap:8px;border-left:2px solid #65d5cc;padding-left:18px!important}
+:is(#app,body) .r7-capacity-chart li strong{color:#65d5cc!important;font-size:36px!important;line-height:1.1}
+:is(#app,body) .r7-capacity-chart li span{color:white!important;font-size:14px!important;line-height:1.5}
+@media(max-width:1000px){:is(#app,body) #sbenefits .r7-process-gallery{grid-template-columns:repeat(2,minmax(0,1fr))!important}:is(#app,body) #sbenefits .r7-process-gallery figure::after{display:none}}
+@media(max-width:680px){:is(#app,body) #sbenefits .r7-process-gallery{grid-template-columns:1fr!important}:is(#app,body) #sbenefits .r7-process-gallery img{height:220px!important}:is(#app,body) #sbenefits .r7-process-gallery figcaption{min-height:0!important}:is(#app,body) .r7-roadmap .treon-project-grid article::after{display:none}:is(#app,body) .r7-lifecycle{padding:20px!important}:is(#app,body) .r7-lifecycle ol{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 14px}:is(#app,body) .r7-lifecycle li:nth-child(2)::after{display:none}:is(#app,body) .r7-franchise-machine{float:none;width:100%;margin:0 0 28px}:is(#app,body) .r7-capacity-chart{padding:22px!important}:is(#app,body) .r7-capacity-chart ol{grid-template-columns:1fr;gap:20px}:is(#app,body) .r7-capacity-chart li strong{font-size:30px!important}}
+:is(#app,body) .r7-machine-hero{display:flex!important;flex-direction:column!important;justify-content:center!important;min-height:0!important;height:auto!important}
+:is(#app,body) .r7-machine-hero::before,:is(#app,body) .r7-machine-hero::after{display:none!important}
+:is(#app,body) .r7-machine-hero img{position:static!important;inset:auto!important;display:block!important;flex:none!important}
+:is(#app,body) #sbenefits .r7-process-gallery figure{display:block!important;height:auto!important;min-height:0!important}
+:is(#app,body) #sbenefits .r7-process-gallery img{position:static!important;inset:auto!important;display:block!important;transform:none!important}
+:is(#app,body) #sbenefits .r7-process-gallery figcaption{position:relative!important;inset:auto!important;z-index:1!important}
+:is(#app,body) #sbenefits .r7-process-gallery figure::before{display:none!important}
+:is(#app,body) #sbenefits .r7-process-gallery figure::after{left:auto!important;bottom:auto!important;background:#f0f6f8!important;height:27px!important;transform:none!important}
+:is(#app,body) #sbenefits .r7-process-gallery figure:last-child::after{display:none!important}
+
+/* R8: balanced Royce partner presentation */
+:is(#app,body) .r8-thailand{background:#fff;color:#193c58}
+:is(#app,body) .r8-thailand>section{padding:64px 24px!important;box-sizing:border-box}
+:is(#app,body) .r8-thailand .wrap{width:100%!important;max-width:1152px!important;margin:0 auto!important;padding:0!important;box-sizing:border-box}
+:is(#app,body) .r8-thailand h1,:is(#app,body) .r8-thailand h2,:is(#app,body) .r8-thailand h3{text-wrap:balance}
+:is(#app,body) .r8-thailand .r8-royce-hero{background:#06264d!important;color:#fff!important}
+:is(#app,body) .r8-royce-heading{display:block!important;max-width:960px;margin-bottom:32px}
+:is(#app,body) .r8-royce-heading .eyebrow{font-size:12px!important;letter-spacing:.12em;color:#65d5cc!important;font-weight:750;margin:0 0 16px!important}
+:is(#app,body) .r8-royce-heading h1{color:#fff!important;font-size:clamp(30px,3.4vw,46px)!important;line-height:1.15!important;margin:0 0 18px!important;max-width:950px!important}
+:is(#app,body) .r8-royce-lead{font-size:17px!important;line-height:1.75!important;max-width:850px;color:#d4e5ee!important;margin:0!important}
+:is(#app,body) .r8-royce-grid{display:grid!important;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr)!important;gap:28px;align-items:stretch}
+:is(#app,body) .r8-royce-media{min-width:0;margin:0!important;padding:0!important;overflow:hidden;border:1px solid #3b637f;border-radius:16px;background:#0b3155;display:flex;flex-direction:column}
+:is(#app,body) .r8-royce-media video{display:block!important;width:100%!important;height:auto!important;aspect-ratio:16/9!important;object-fit:contain!important;background:#fff!important;position:static!important;border-radius:0!important}
+:is(#app,body) .r8-royce-media figcaption{padding:22px!important;display:flex;flex-direction:column;gap:7px;color:#d4e5ee!important;position:static!important;background:none!important;font-size:13px;line-height:1.65}
+:is(#app,body) .r8-royce-media figcaption>strong{color:#65d5cc!important;font-size:17px}
+:is(#app,body) .r8-royce-media figcaption a{position:static!important;display:inline-block!important;background:none!important;color:#d4e5ee!important;padding:0!important;text-decoration:underline!important;text-underline-offset:4px;font-size:13px;line-height:1.65}
+:is(#app,body) .r8-royce-media figcaption p{margin:8px 0 0!important}
+:is(#app,body) .r8-royce-tag{display:flex;flex-direction:column;border-top:1px solid #3b637f;margin-top:7px;padding-top:10px;color:#d4e5ee!important}
+:is(#app,body) .r8-royce-tag strong{color:#fff!important}
+:is(#app,body) .r8-royce-overview{padding:26px!important;border:1px solid #3b637f;border-radius:16px;background:#0b3155;min-width:0;display:flex;flex-direction:column;gap:18px}
+:is(#app,body) .r8-royce-overview h2{font-size:22px!important;line-height:1.3!important;color:#fff!important;margin:0!important}
+:is(#app,body) .r8-royce-stats{display:grid;gap:15px}
+:is(#app,body) .r8-royce-stats .stat{padding:0 0 15px!important;margin:0!important;border:0!important;border-bottom:1px solid #3b637f!important;background:none!important;display:flex;flex-direction:column;gap:4px;border-radius:0!important}
+:is(#app,body) .r8-royce-stats .stat strong{font-size:15px!important;color:#65d5cc!important}
+:is(#app,body) .r8-royce-stats .stat span{font-size:14px!important;color:#d4e5ee!important;line-height:1.5!important}
+:is(#app,body) .r8-royce-note{font-size:14px!important;line-height:1.7!important;color:#d4e5ee!important;margin:0!important}
+:is(#app,body) .r8-royce-cta{color:#65d5cc!important;font-size:14px!important;font-weight:700;text-decoration:none!important;margin-top:auto;line-height:1.6}
+:is(#app,body) .r8-thailand .value-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:28px}
+:is(#app,body) .r8-thailand .value-card{border-radius:16px!important;border:1px solid #d7e5ec!important;background:white!important;overflow:hidden!important}
+:is(#app,body) .r8-thailand .value-card .pic{height:220px!important;aspect-ratio:auto!important;position:relative!important}
+:is(#app,body) .r8-thailand .value-card img{width:100%!important;height:100%!important;object-fit:cover!important}
+:is(#app,body) .r8-thailand .value-card .body{padding:24px!important}
+:is(#app,body) .r8-thailand .value-card h3{font-size:20px!important;line-height:1.3!important;color:#06264d!important;margin:0 0 12px!important}
+:is(#app,body) .r8-thailand .value-card p{font-size:15px!important;line-height:1.7!important;color:#35566d!important;margin:0!important}
+:is(#app,body) .r8-process{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px!important;margin-top:30px}
+:is(#app,body) .r8-process .step{border:1px solid #d7e5ec!important;border-top:3px solid #54bfb9!important;border-radius:12px!important;background:#f2f7fa!important;padding:24px!important;min-width:0}
+:is(#app,body) .r8-process .n{font-size:12px!important;font-weight:750;color:#087f87!important;letter-spacing:.04em}
+:is(#app,body) .r8-process h3{font-size:19px!important;line-height:1.35!important;margin:14px 0!important;color:#06264d!important}
+:is(#app,body) .r8-process p{font-size:14px!important;line-height:1.7!important;color:#35566d!important;margin:0!important}
+:is(#app,body) .r8-expansion{margin:28px 0!important;padding:28px!important;background:#06264d;border-radius:16px;color:white;box-sizing:border-box}
+:is(#app,body) .r8-expansion figcaption{font-size:19px;font-weight:700;color:white!important}
+:is(#app,body) .r8-expansion-equation{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin:28px 0}
+:is(#app,body) .r8-expansion-equation>div{display:flex;flex-direction:column;gap:10px;position:relative;min-width:0}
+:is(#app,body) .r8-expansion-equation>div>strong{font-size:clamp(24px,3vw,38px);line-height:1.1;color:#65d5cc!important}
+:is(#app,body) .r8-expansion-equation>div>span{font-size:14px;line-height:1.5;color:white!important}
+:is(#app,body) .r8-expansion-equation>div:first-child::after{content:'×';position:absolute;right:-26px;top:5px;font-size:24px;color:#65d5cc}
+:is(#app,body) .r8-expansion-equation>div:nth-child(2)::after{content:'=';position:absolute;right:-26px;top:5px;font-size:24px;color:#65d5cc}
+:is(#app,body) .r8-expansion>p{font-size:12px!important;line-height:1.7!important;margin:0!important;color:#c5dce7!important}
+:is(#app,body) .r8-planning-details{border:1px solid #cfdee8;border-radius:12px;padding:20px!important;background:#fff}
+:is(#app,body) .r8-planning-details>summary{font-size:16px;font-weight:700;color:#06264d;cursor:pointer;line-height:1.5}
+:is(#app,body) .r8-partners{background:#06264d!important;color:#fff!important}
+:is(#app,body) .r8-partners h2,:is(#app,body) .r8-partners b{color:white!important}
+:is(#app,body) .r8-partners p,:is(#app,body) .r8-partners span{color:#d4e5ee!important}
+:is(#app,body) .r8-partners .market-box,:is(#app,body) .r8-partners .tag{background:#0b3155!important;border-color:#3b637f!important}
+:is(#app,body) .r8-home-royce .r6-project-grid{grid-template-columns:minmax(0,1.12fr) minmax(0,1fr)!important;gap:28px!important;align-items:stretch!important}
+:is(#app,body) .r8-home-royce .r6-project-heading{max-width:960px!important;margin-bottom:28px!important}
+:is(#app,body) .r8-home-royce .r6-project-heading h2{font-size:clamp(29px,3.2vw,43px)!important;max-width:950px!important;line-height:1.2!important}
+:is(#app,body) .r8-home-royce .r6-project-status h3{font-size:22px!important;line-height:1.35!important}
+body.treon-r6 footer{background:#06264d!important;color:#fff!important}
+body.treon-r6 footer strong,body.treon-r6 footer small,body.treon-r6 footer a{color:#e2eef5!important;opacity:1!important}
+@media(max-width:900px){:is(#app,body) .r8-royce-grid{grid-template-columns:1fr!important}:is(#app,body) .r8-process{grid-template-columns:repeat(2,minmax(0,1fr))}:is(#app,body) .r8-home-royce .r6-project-grid{grid-template-columns:1fr!important}}
+@media(max-width:680px){:is(#app,body) .r8-thailand>section{padding:40px 20px!important}:is(#app,body) .r8-royce-heading h1{font-size:30px!important}:is(#app,body) .r8-royce-lead{font-size:16px!important}:is(#app,body) .r8-royce-overview{padding:22px!important}:is(#app,body) .r8-thailand .value-grid,:is(#app,body) .r8-process{grid-template-columns:1fr!important}:is(#app,body) .r8-expansion{padding:22px!important}:is(#app,body) .r8-expansion-equation{grid-template-columns:1fr;gap:28px}:is(#app,body) .r8-expansion-equation>div:not(:last-child){padding-bottom:24px;border-bottom:1px solid #3b637f}:is(#app,body) .r8-expansion-equation>div::after{display:none}:is(#app,body) .r8-partners .partner-band{display:block!important}:is(#app,body) .r8-partners .market-panel{margin-top:24px}}
+
+/* R9: concise homepage with all project details retained */
+:is(#app,body) .r9-project-detail{margin:22px 0!important;border-top:1px solid #cbdde7!important;border-bottom:1px solid #cbdde7!important;padding:18px 0!important}
+:is(#app,body) .r9-project-detail>summary{font-size:16px!important;line-height:1.5!important;font-weight:700!important;color:#65d5cc!important;cursor:pointer!important;text-align:left!important}
+:is(#app,body) .r9-project-detail .industry-invite-grid{margin-top:24px!important}
+:is(#app,body) .r9-project-detail .industry-invite-next{margin-top:20px!important}
+:is(#app,body) .r9-project-detail+ .industry-invite-button{margin-top:0!important;display:inline-flex!important}
+@media(max-width:680px){:is(#app,body) .r9-project-detail>summary{font-size:15px!important}}
+
+/* R11: compact supplementary carbon concept */
+:is(#app,body) .gc-compact-r11 .gc-layout{align-items:start!important}
+:is(#app,body) .gc-compact-r11 h2{margin-top:0!important}
+:is(#app,body) .gc-compact-r11 a{color:#65d5cc!important;text-decoration:underline;text-underline-offset:4px}
+:is(#app,body) .gc-compact-r11 a:hover{color:#fff!important}
+:is(#app,body) .gc-compact-r11 a:focus-visible{outline:2px solid #65d5cc;outline-offset:4px}
+
+/* R12: visual explanations in TREON navy, white and turquoise */
+:is(#app,body) .r12-role-figure{margin:28px 0 30px!important;padding:0!important}
+:is(#app,body) .r12-role-figure>figcaption{font-size:12px!important;letter-spacing:.09em;text-transform:uppercase;font-weight:750;color:#087f87!important;margin:0 0 16px!important}
+:is(#app,body) .r12-role-flow{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:28px!important;list-style:none!important;margin:0!important;padding:0!important}
+:is(#app,body) .r12-role-flow>li{position:relative;display:grid!important;grid-template-columns:48px minmax(0,1fr);align-content:start;gap:4px 16px;border:1px solid #cddfe9!important;border-top:3px solid #0e9399!important;border-radius:12px!important;background:#fff!important;padding:24px!important;min-width:0}
+:is(#app,body) .r12-role-flow>li:not(:last-child)::after{content:'→';position:absolute;right:-24px;top:41px;font-size:22px;color:#087f87}
+:is(#app,body) .r12-icon{display:block!important;flex-shrink:0;width:36px!important;height:36px!important;color:#087f87!important;grid-row:span 2}
+:is(#app,body) .r12-role-flow strong{color:#06264d!important;font-size:19px!important;line-height:1.3!important;display:block}
+:is(#app,body) .r12-role-flow span{color:#35566d!important;font-size:14px!important;line-height:1.6!important;display:block}
+:is(#app,body) .r12-caption{font-size:12px!important;line-height:1.65!important;color:#526b7b!important;margin:12px 0 0!important;max-width:900px}
+:is(#app,body) .r12-details{border:1px solid #cddfe9!important;border-radius:10px!important;background:#fff!important;padding:16px 20px!important;margin:24px 0!important;color:#35566d!important}
+:is(#app,body) .r12-details>summary{font-size:15px!important;font-weight:700!important;line-height:1.5!important;color:#06264d!important;cursor:pointer!important}
+:is(#app,body) .r12-details-body{padding-top:18px}
+:is(#app,body) .r12-details-body p{font-size:15px!important;line-height:1.75!important;color:#35566d!important;margin:0 0 14px!important}
+:is(#app,body) .r12-details-body article+article{margin-top:20px}
+:is(#app,body) .r12-details-body h3{font-size:18px!important;line-height:1.4!important;color:#06264d!important;margin:0 0 8px!important}
+:is(#app,body) .r12-package-card .r12-icon{margin-bottom:18px}
+:is(#app,body) .r12-process-grid{gap:24px!important;align-items:stretch!important}
+:is(#app,body) .r12-process-card{padding:0!important;overflow:hidden!important;border-radius:14px!important;border:1px solid #d7e5ed!important;background:#fff!important;min-width:0}
+:is(#app,body) .r12-photo{margin:0!important;padding:0!important;min-width:0}
+:is(#app,body) .r12-photo>img{display:block!important;width:100%!important;height:210px!important;object-fit:cover!important;aspect-ratio:16/10!important;border-radius:0!important}
+:is(#app,body) .r12-photo>figcaption{display:block!important;font-size:11px!important;line-height:1.5!important;color:#526b7b!important;background:#edf5f8!important;padding:10px 16px!important;margin:0!important;min-height:36px;box-sizing:border-box}
+:is(#app,body) .r12-source{display:block!important;background:#edf5f8!important;color:#08657d!important;padding:0 16px 10px!important;font-size:11px!important;line-height:1.5!important;text-decoration:underline!important}
+:is(#app,body) .r12-process-body{padding:24px!important}
+:is(#app,body) .r12-step{display:block!important;font-size:12px!important;line-height:1.4!important;font-weight:750!important;letter-spacing:.05em!important;color:#087f87!important;margin-bottom:10px!important}
+:is(#app,body) .r12-process-body h3{font-size:21px!important;line-height:1.3!important;margin:0 0 10px!important;color:#06264d!important}
+:is(#app,body) .r12-process-body p{font-size:15px!important;line-height:1.65!important;color:#35566d!important;margin:0!important}
+:is(#app,body) .r12-process-card:nth-child(2) .r12-photo>img{object-fit:contain!important;background:#06264d!important}
+:is(#app,body) .r12-thai-process{gap:20px!important}
+:is(#app,body) .r12-thai-step{padding:0 0 22px!important;overflow:hidden!important}
+:is(#app,body) .r12-thai-step>.n,:is(#app,body) .r12-thai-step>h3,:is(#app,body) .r12-thai-step>p{margin-left:20px!important;margin-right:20px!important}
+:is(#app,body) .r12-thai-step>.n{margin-top:20px!important}
+:is(#app,body) .r12-thai-step .r12-photo>img{height:150px!important}
+:is(#app,body) .r12-thai-step .r12-photo>figcaption{padding:9px 14px!important;min-height:51px}
+:is(#app,body) .r12-thai-step:nth-child(3) .r12-photo>img{object-fit:contain!important;background:#06264d!important}
+:is(#app,body) .r12-material-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:20px!important}
+:is(#app,body) .r12-material-grid .visual-card{position:relative!important;margin:0!important;border:1px solid #d7e5ed!important;background:#fff!important;border-radius:12px!important;overflow:hidden!important;min-width:0}
+:is(#app,body) .r12-material-grid .visual-card>img{height:220px!important;width:100%!important;object-fit:cover!important;display:block!important}
+:is(#app,body) .r12-material-grid .visual-caption{position:static!important;display:flex!important;flex-direction:column!important;background:#fff!important;color:#06264d!important;font-size:15px!important;font-weight:700!important;line-height:1.5!important;padding:18px!important;min-height:78px;box-sizing:border-box}
+:is(#app,body) .r12-material-grid .visual-caption .r12-step{margin-bottom:8px!important}
+:is(#app,body) .r12-lifecycle{list-style:none!important;display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:24px!important;padding:0!important;margin:28px 0 18px!important}
+:is(#app,body) .r12-lifecycle li{position:relative;padding:24px!important;border:1px solid #cddfe9;border-radius:12px;background:#f2f7fa;min-width:0}
+:is(#app,body) .r12-lifecycle li:not(:last-child)::after{content:'→';position:absolute;right:-21px;top:50%;font-size:20px;color:#087f87}
+:is(#app,body) .r12-lifecycle .r12-icon{margin-bottom:18px}
+:is(#app,body) .r12-lifecycle strong{display:block;color:#06264d;font-size:17px;line-height:1.4}
+:is(#app,body) .w2p-technology .r12-details .w2p-features{margin:20px 0!important}
+:is(#app,body) .r12-details:focus-within{outline:2px solid #0e9399;outline-offset:3px}
+@media(max-width:950px){:is(#app,body) .r12-role-flow{gap:20px!important}:is(#app,body) .r12-role-flow>li{display:block!important;padding:20px!important}:is(#app,body) .r12-role-flow .r12-icon{margin-bottom:16px}:is(#app,body) .r12-role-flow strong{margin-bottom:8px}:is(#app,body) .r12-role-flow>li:not(:last-child)::after{right:-18px}:is(#app,body) .r12-material-grid,:is(#app,body) .r12-lifecycle{grid-template-columns:repeat(2,minmax(0,1fr))!important}:is(#app,body) .r12-lifecycle li:nth-child(2)::after{display:none}}
+@media(max-width:680px){:is(#app,body) .r12-role-flow,:is(#app,body) .r12-process-grid,:is(#app,body) .r12-lifecycle{grid-template-columns:1fr!important}:is(#app,body) .r12-role-flow>li{display:grid!important;grid-template-columns:42px minmax(0,1fr);gap:4px 14px}:is(#app,body) .r12-role-flow .r12-icon{margin:0!important}:is(#app,body) .r12-role-flow>li:not(:last-child)::after{content:'↓';right:24px;top:auto;bottom:-24px;font-size:20px}:is(#app,body) .r12-role-flow strong{font-size:18px!important;margin:0}:is(#app,body) .r12-material-grid{gap:12px!important}:is(#app,body) .r12-material-grid .visual-card>img{height:155px!important}:is(#app,body) .r12-material-grid .visual-caption{padding:14px!important;font-size:13px!important}:is(#app,body) .r12-lifecycle li{display:grid;grid-template-columns:42px minmax(0,1fr);gap:6px 14px;padding:20px!important}:is(#app,body) .r12-lifecycle .r12-icon{grid-row:span 2;margin:0}:is(#app,body) .r12-lifecycle .r12-step{margin:0!important}:is(#app,body) .r12-lifecycle li:not(:last-child)::after{display:block;content:'↓';right:24px;top:auto;bottom:-24px}:is(#app,body) .r12-details{padding:16px!important}:is(#app,body) .r12-photo>img{height:205px!important}:is(#app,body) .r12-thai-process .r12-photo>img{height:190px!important}}
+
+:is(#app,body) .r12-details-body dd{color:#35566d!important;border-bottom-color:#cddfe9!important}
+:is(#app,body) .r12-details-body dt{color:#06264d!important;border-bottom-color:#cddfe9!important}
+:is(#app,body) .r12-standard-heading{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:44px;align-items:center;margin-bottom:28px}
+:is(#app,body) .r12-standard-heading .r12-photo{border-radius:14px!important;overflow:hidden}
+:is(#app,body) .r12-standard-heading .r12-photo>img{height:265px!important}
+:is(#app,body) .r12-photo-note{display:block!important;font-size:10px!important;line-height:1.5!important;color:#526b7b!important;margin-top:8px!important;font-weight:400!important}
+@media(max-width:760px){:is(#app,body) .r12-standard-heading{grid-template-columns:1fr;gap:20px}:is(#app,body) .r12-standard-heading .r12-photo>img{height:220px!important}}
+:is(#app,body) .r12-machine-diagram{box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;width:100%;min-height:210px;padding:18px;background:#06264d;color:#65d5cc;border-radius:10px}
+:is(#app,body) .r12-machine-diagram>svg{display:block;width:100%;max-width:360px;height:150px}
+:is(#app,body) .r12-machine-diagram>span{display:block;color:#e2eef5!important;font-size:12px!important;line-height:1.5!important;text-align:center}
+:is(#app,body) #sbenefits .r12-machine-diagram{height:190px;min-height:0;border-radius:0}
+:is(#app,body) #sbenefits .r12-machine-diagram>svg{height:125px}
+:is(#app,body) .r12-thai-step .r12-machine-diagram{height:150px;min-height:0;padding:8px;border-radius:0}
+:is(#app,body) .r12-thai-step .r12-machine-diagram>svg{height:100px}
+:is(#app,body) .r7-franchise-machine .r12-machine-diagram{min-height:285px}
+:is(#app,body) .r12-text-only{display:block!important;grid-template-columns:1fr!important}
+:is(#app,body) .r12-text-only>div{padding:24px!important}
+@media(max-width:680px){:is(#app,body) .r12-thai-step .r12-machine-diagram{height:190px}:is(#app,body) .r12-thai-step .r12-machine-diagram>svg{height:135px}}
+:is(#app,body) .r12-process-card:nth-child(2) .r12-photo>img{object-fit:cover!important;background:#edf5f8!important}
+
+/* R13: image-led technology page, six concise sections */
+:is(#app,body) .r13-section{padding:56px 24px!important;scroll-margin-top:90px;color:#06264d;background:#fff}
+:is(#app,body) .r13-section>.wrap{max-width:1120px;margin:auto;padding:0!important;width:100%}
+:is(#app,body) .r13-section h2{font-size:clamp(28px,3vw,40px)!important;line-height:1.2!important;letter-spacing:-.025em!important;color:#06264d!important;margin:0 0 24px!important;max-width:900px}
+:is(#app,body) .r13-section .r13-intro{font-size:17px!important;line-height:1.7!important;color:#35566d!important;max-width:760px;margin:0 0 24px!important}
+:is(#app,body) .r13-material,:is(#app,body) .r13-platform{background:#f0f6f9!important}
+:is(#app,body) .r13-material-photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:26px}
+:is(#app,body) .r13-photo{margin:0!important;padding:0!important;border-radius:12px!important;overflow:hidden;min-width:0;background:#fff;border:1px solid #d3e2eb}
+:is(#app,body) .r13-photo>img{width:100%!important;height:220px!important;display:block!important;object-fit:cover!important;aspect-ratio:auto!important;border-radius:0!important}
+:is(#app,body) .r13-photo>figcaption{display:block;font-size:12px!important;line-height:1.5!important;color:#526b7b!important;padding:12px 16px!important;margin:0!important;background:#fff}
+:is(#app,body) .r13-source{display:block;color:#087f87!important;font-size:11px!important;line-height:1.5!important;padding:0 16px 12px!important;text-decoration:underline!important}
+:is(#app,body) .r13-material-photos>.r13-photo:nth-child(2)>img{object-fit:contain!important;background:#06264d!important}
+:is(#app,body) .r13-details{margin:26px 0 0!important;padding:16px 20px!important;border:1px solid #cbdde7!important;border-radius:10px!important;background:#fff!important}
+:is(#app,body) .r13-details>summary{cursor:pointer;color:#06264d!important;font-size:15px!important;font-weight:700!important;line-height:1.5!important}
+:is(#app,body) .r13-details[open]>summary{padding-bottom:16px;border-bottom:1px solid #d3e2eb}
+:is(#app,body) .r13-detail-body{padding-top:20px;color:#35566d}
+:is(#app,body) .r13-original-detail{padding:0!important;margin:0 0 26px!important;background:transparent!important;border:0!important;box-shadow:none!important;max-width:100%!important}
+:is(#app,body) .r13-original-detail:last-child{margin-bottom:0!important}
+:is(#app,body) .r13-original-detail>.wrap,:is(#app,body) .r13-original-detail>.gc-inner,:is(#app,body) .r13-original-detail>.cirpal-update-inner{max-width:100%!important;width:100%!important;margin:0!important;padding:0!important}
+:is(#app,body) .r13-detail-body :is(p,span,dt,dd,li,td,th){color:#35566d!important}
+:is(#app,body) .r13-detail-body :is(h2,h3,h4,strong,b){color:#06264d!important}
+:is(#app,body) .r13-detail-body h2{font-size:22px!important;line-height:1.4!important;margin:0 0 14px!important;letter-spacing:0!important}
+:is(#app,body) .r13-detail-body h3{font-size:18px!important;line-height:1.4!important;margin:0 0 12px!important}
+:is(#app,body) .r13-detail-body :is(p,li,dt,dd){font-size:14px!important;line-height:1.75!important}
+:is(#app,body) .r13-detail-body :is(.maturity-panel,.ip-evidence,.pilot-roadmap,.machine-definition,.card,.partner-material-story,.cirpal-invest-grid article){background:#edf5f8!important;color:#35566d!important;border-color:#cbdde7!important}
+:is(#app,body) .r13-detail-body a{color:#087f87!important}
+:is(#app,body) .r13-detail-body .btn{background:#06264d!important;color:#fff!important}
+:is(#app,body) .r13-detail-body .story-hero,:is(#app,body) .r13-detail-body .story-pair{display:block!important;gap:0!important}
+:is(#app,body) .r13-detail-body .story-hero>div{padding:16px!important}
+:is(#app,body) .r13-detail-body .meonx-location{max-width:620px!important;margin:20px 0!important}
+:is(#app,body) .r13-detail-body video{max-width:100%!important;height:auto!important}
+:is(#app,body) .r13-development-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
+:is(#app,body) .r13-trl{display:block;color:#087f87!important;font-size:clamp(42px,5vw,64px)!important;font-weight:750!important;line-height:1.1!important;letter-spacing:-.04em}
+:is(#app,body) .r13-caption{font-size:12px!important;line-height:1.65!important;color:#526b7b!important;margin:10px 0 0!important}
+:is(#app,body) .r13-roadmap{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:14px}
+:is(#app,body) .r13-roadmap>li{display:flex;align-items:center;gap:16px;padding:15px 18px;border:1px solid #d3e2eb;border-radius:9px;background:#f2f7fa;color:#06264d}
+:is(#app,body) .r13-roadmap strong{font-size:15px;line-height:1.4}
+:is(#app,body) .r13-step-number{font-size:12px!important;font-weight:750!important;color:#087f87!important;line-height:1.3}
+:is(#app,body) .r13-development-grid>.r13-photo>img{height:295px!important;object-fit:contain!important;background:#edf5f8!important}
+:is(#app,body) .r13-kicker{margin:0 0 12px!important;font-size:11px!important;font-weight:750!important;letter-spacing:.1em!important;color:#087f87!important}
+:is(#app,body) .r13-platform-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:40px;align-items:center}
+:is(#app,body) .r13-platform-grid>.r13-photo>img{height:200px!important}
+:is(#app,body) .r13-platform-grid a{font-size:15px!important;color:#087f87!important;font-weight:700!important;text-decoration:underline!important;text-underline-offset:4px}
+:is(#app,body) .r13-lifecycle{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;padding:0;margin:28px 0 0}
+:is(#app,body) .r13-lifecycle>li{position:relative;border:1px solid #cbdde7;border-radius:9px;background:#fff;padding:18px;min-width:0}
+:is(#app,body) .r13-lifecycle>li:not(:last-child)::after{position:absolute;right:-18px;top:40%;content:'→';font-size:18px;color:#087f87}
+:is(#app,body) .r13-lifecycle strong{display:block;font-size:14px;line-height:1.4;margin-top:8px;color:#06264d}
+:is(#app,body) .r13-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+:is(#app,body) .r13-buttons .btn{margin:0!important}
+:is(#app,body) .r13-details:focus-within{outline:2px solid #0e9399;outline-offset:3px}
+@media(max-width:760px){:is(#app,body) .r13-section{padding:40px 20px!important}:is(#app,body) .r13-section h2{font-size:29px!important;line-height:1.25!important}:is(#app,body) .r13-section .r13-intro{font-size:16px!important}:is(#app,body) .r13-material-photos,:is(#app,body) .r13-development-grid,:is(#app,body) .r13-platform-grid{grid-template-columns:1fr;gap:20px}:is(#app,body) .r13-material-photos>.r13-photo{display:grid;grid-template-columns:42% minmax(0,1fr);align-items:start}:is(#app,body) .r13-material-photos>.r13-photo>img{height:150px!important;grid-row:span 2}:is(#app,body) .r13-material-photos>.r13-photo>figcaption{padding:18px 14px!important}:is(#app,body) .r13-material-photos>.r13-photo>.r13-source{padding:0 14px 14px!important}:is(#app,body) .r13-lifecycle{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}:is(#app,body) .r13-lifecycle>li:nth-child(2)::after{display:none}:is(#app,body) .r13-details{padding:15px!important}:is(#app,body) .r13-buttons{display:grid}:is(#app,body) .r13-buttons .btn{text-align:center}:is(#app,body) .r13-detail-body :is(.maturity,.ip-roadmap,.grid3,.grid){display:block!important}:is(#app,body) .r13-detail-body :is(.card,.ip-evidence,.pilot-roadmap){margin-bottom:18px!important}}
+
+/* R14: explanatory diagrams and progressive disclosure without losing source information */
+:is(#app,body) .r14-details{display:block;margin:22px 0!important;padding:16px 20px!important;border:1px solid #cbdde7!important;border-radius:10px!important;background:#fff!important;color:#35566d!important}
+:is(#app,body) .r14-details>summary{font-size:15px!important;line-height:1.5!important;font-weight:700!important;cursor:pointer;color:#06264d!important;text-align:left!important}
+:is(#app,body) .r14-details-body{padding-top:18px!important}
+:is(#app,body) .r14-details-body :is(p,li,dd,dt,span,figcaption){color:#35566d!important;font-size:14px!important;line-height:1.75!important}
+:is(#app,body) .r14-details-body :is(h2,h3,h4,strong,b){color:#06264d!important}
+:is(#app,body) .r14-details-body :is(h2,h3,h4){font-size:20px!important;line-height:1.4!important;margin:0 0 14px!important}
+:is(#app,body) .r14-details-body a{color:#087f87!important}
+:is(#app,body) .r14-details-body .r7-franchise-machine{float:none!important;width:100%!important;max-width:420px;margin:0 0 24px!important}
+:is(#app,body) .r14-details-body .r7-capacity-chart{background:#edf5f8!important}
+:is(#app,body) .r14-details-body .r12-machine-diagram>span{color:#e2eef5!important}
+:is(#app,body) .r14-caption{font-size:12px!important;font-weight:400!important;line-height:1.65!important;color:#526b7b!important;margin:12px 0 0!important;letter-spacing:0!important}
+:is(#app,body) .r14-responsibility{margin:0!important;padding:0!important}
+:is(#app,body) .r14-responsibility figcaption h2{font-size:clamp(28px,3vw,40px)!important;line-height:1.2!important;max-width:920px!important;color:#06264d!important;margin:0 0 28px!important}
+:is(#app,body) .r14-responsibility-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+:is(#app,body) .r14-responsibility-column{padding:26px;border:1px solid #d0e0ea;border-top:3px solid #0e9399;border-radius:14px;background:#f1f7fa;min-width:0}
+:is(#app,body) .r14-responsibility-column:nth-child(2){background:#06264d;border-color:#315472}
+:is(#app,body) .r14-responsibility-column h3{font-size:22px!important;line-height:1.35!important;color:#06264d!important;margin:0 0 20px!important}
+:is(#app,body) .r14-responsibility-column:nth-child(2) h3,:is(#app,body) .r14-responsibility-column:nth-child(2) .r14-caption{color:#e2eef5!important}
+:is(#app,body) .r14-funding-nodes{display:grid;gap:10px;padding:0!important;margin:0!important;list-style:none!important}
+:is(#app,body) .r14-funding-nodes>li{padding:12px 16px;background:#fff;border:1px solid #cbdde7;border-radius:8px;color:#06264d;font-size:15px;font-weight:650;line-height:1.4}
+:is(#app,body) .r14-funding-nodes>li::before{content:'✓';color:#087f87;margin-right:12px}
+:is(#app,body) .r14-responsibility-column:nth-child(2) .r14-funding-nodes>li::before{content:'+'}
+:is(#app,body) .r14-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:26px 0 0}
+:is(#app,body) .r14-metrics>div{display:flex;flex-direction:column;gap:8px;padding:24px;border:1px solid #d0e0ea;border-radius:12px;min-width:0;background:white}
+:is(#app,body) .r14-metrics strong{font-size:clamp(23px,2.5vw,32px)!important;line-height:1.25!important;color:#06264d!important;letter-spacing:-.025em}
+:is(#app,body) .r14-metrics span{font-size:13px;color:#526b7b;line-height:1.5}
+:is(#app,body) .r14-click-flow{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important}
+:is(#app,body) .r14-click-flow>article{margin:0!important;padding:0!important;background:transparent!important;border:0!important}
+:is(#app,body) .r14-click-flow .r14-details{height:100%;box-sizing:border-box;margin:0!important;padding:20px!important}
+:is(#app,body) .r14-click-flow .process-dot{display:none!important}
+:is(#app,body) .r14-business-flow>article{padding:20px!important;min-width:0}
+:is(#app,body) .r14-business-flow .r14-details{margin:12px 0 0!important;padding:14px!important;background:#f1f7fa!important}
+:is(#app,body) .r14-business-flow .r14-details>summary{font-size:16px!important;line-height:1.45!important}
+:is(#app,body) .r14-resource-flow{margin:28px 0!important;padding:26px!important;background:#f1f7fa!important;border:1px solid #cbdde7;border-radius:14px;box-sizing:border-box;color:#06264d!important}
+:is(#app,body) .r14-resource-flow>figcaption{font-size:21px!important;font-weight:700!important;line-height:1.4!important;color:#06264d!important;margin:0 0 22px!important}
+:is(#app,body) .r14-resource-lane{display:grid;grid-template-columns:160px minmax(0,1fr);gap:20px;align-items:center;margin-bottom:18px}
+:is(#app,body) .r14-lane-label{font-size:13px;line-height:1.5;color:#087f87!important}
+:is(#app,body) .r14-resource-lane>ol{list-style:none!important;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:0!important;padding:0!important}
+:is(#app,body) .r14-resource-lane .r14-node{position:relative;display:flex;align-items:center;justify-content:center;min-height:74px;padding:14px;background:#fff;border:1px solid #bed6e3;border-radius:9px;text-align:center;color:#06264d!important;font-size:15px!important;line-height:1.45!important;font-weight:650}
+:is(#app,body) .r14-resource-lane .r14-node:not(:last-child)::after{content:'→';position:absolute;right:-21px;top:35%;font-size:20px;color:#087f87}
+:is(#app,body) .r14-resource-lane:nth-child(3) .r14-node{background:#e7f3ed;border-color:#b5d4c9}
+:is(#app,body) .r14-resource-flow>.r14-caption{color:#526b7b!important;font-size:12px!important;line-height:1.7!important;margin:10px 0 0!important}
+:is(#app,body) .r14-machine-row{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin:24px 0!important;color:#65d5cc}
+:is(#app,body) .r14-machine-row>svg{display:block;width:48px;height:48px}
+body.r14-policy main{max-width:980px;margin-inline:auto}
+body.r14-policy main p{max-width:74ch;line-height:1.8!important}
+:is(#app,body) .r14-details:focus-within{outline:2px solid #0e9399;outline-offset:3px}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){:is(#app,body) .image-card .pic,:is(#app,body) .value-card .pic{overflow:hidden}:is(#app,body) .image-card .pic img,:is(#app,body) .value-card .pic img{transition:transform 180ms ease}:is(#app,body) .image-card:hover .pic img,:is(#app,body) .value-card:hover .pic img{transform:scale(1.035)}}
+@media(max-width:850px){:is(#app,body) .r14-resource-lane{grid-template-columns:1fr;gap:10px}:is(#app,body) .r14-click-flow{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:680px){:is(#app,body) .r14-responsibility-grid,:is(#app,body) .r14-metrics,:is(#app,body) .r14-click-flow{grid-template-columns:1fr!important;gap:16px!important}:is(#app,body) .r14-responsibility-column{padding:22px}:is(#app,body) .r14-resource-flow{padding:20px!important}:is(#app,body) .r14-resource-lane>ol{grid-template-columns:1fr;gap:20px}:is(#app,body) .r14-resource-lane .r14-node{min-height:55px}:is(#app,body) .r14-resource-lane .r14-node:not(:last-child)::after{content:'↓';right:22px;top:auto;bottom:-24px}:is(#app,body) .r14-details{padding:16px!important}:is(#app,body) .r14-machine-row{gap:12px}:is(#app,body) .r14-machine-row>svg{width:37px;height:37px}:is(#app,body) .r14-business-flow{grid-template-columns:1fr!important}}
+
+/* R15: evidence-led territory progress and balanced homepage actions */
+.r15-markets{padding:64px 0;background:#f0f6fa;color:#06264d;scroll-margin-top:100px}.r15-markets .wrap{max-width:1200px;margin:auto;padding:0 24px}.r15-markets h2{font-size:clamp(25px,3vw,36px);line-height:1.2;margin:8px 0 12px;color:#06264d}.r15-market-intro{max-width:760px;line-height:1.65;margin:0 0 26px}.r15-market-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.r15-market{border:1px solid #c9dce6;border-top:3px solid #0d868c;border-radius:12px;background:white;padding:22px;min-width:0}.r15-market h3{font-size:23px;margin:16px 0 10px;color:#06264d}.r15-market p{font-size:15px;line-height:1.65;margin:0;color:#294b63}.r15-status{display:inline-block;font-size:12px;font-weight:700;line-height:1.4;padding:6px 9px;border-radius:5px;color:#07545b;background:#def3ef}.r15-market.pending{border-top-color:#8c772c}.r15-market.pending .r15-status{background:#faf0cf;color:#645015}.r15-market-note{font-size:13px;line-height:1.65;color:#36566b;margin:22px 0 16px}.r15-other{background:white;border:1px solid #c9dce6;border-radius:8px;padding:14px 18px;margin:16px 0}.r15-other summary{font-weight:650;cursor:pointer}.r15-other p{font-size:14px;line-height:1.7;margin:12px 0 0}.r15-asof{font-size:12px;color:#456477;margin:0 0 8px}.r15-flow{padding:48px 0;color:#06264d;background:white}.r15-flow .wrap{max-width:1200px;margin:auto;padding:0 24px}.r15-flow h2{font-size:clamp(25px,3vw,34px);margin:0 0 12px}.r15-flow ol{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;list-style:none;padding:0;margin:28px 0 0}.r15-flow li{padding:20px 16px;background:#edf5f8;border-radius:10px;border-top:3px solid #0d868c}.r15-flow li>span{display:block;color:#087f87;font-size:13px;font-weight:750;margin-bottom:12px}.r15-flow strong{display:block;font-size:16px;line-height:1.4}.r15-flow li p{font-size:14px;line-height:1.6;margin:10px 0 0}html body #s1 .entry-actions{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important;max-width:590px!important;align-items:stretch!important}html body #s1 .entry-actions .entry-btn{display:flex!important;justify-content:space-between!important;align-items:center!important;gap:14px!important;width:auto!important;min-height:54px!important;margin:0!important;padding:14px 18px!important;border-radius:7px!important;font-size:15px!important;line-height:1.35!important;font-weight:700!important;box-shadow:none!important;text-decoration:none!important;transition:background .18s,color .18s!important}html body #s1 .entry-actions .entry-btn.primary{background:#65d5cc!important;border:1px solid #65d5cc!important;color:#06264d!important}html body #s1 .entry-actions .entry-btn.secondary{background:transparent!important;border:1px solid #65d5cc!important;color:#ffffff!important}html body #s1 .entry-actions .entry-btn:hover{background:#06264d!important;color:white!important;border-color:#06264d!important}html body #s1 .entry-actions .entry-btn:focus-visible{outline:3px solid #087f87!important;outline-offset:4px!important}.r15-market-link{display:inline-flex;color:#07545b;font-weight:700;font-size:15px;text-underline-offset:4px;margin-top:8px}@media(max-width:900px){.r15-flow ol{grid-template-columns:repeat(3,minmax(0,1fr))}.r15-market-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.r15-markets{padding:42px 0}.r15-market-grid,.r15-flow ol{grid-template-columns:1fr}.r15-market{padding:18px}.r15-flow li{display:grid;grid-template-columns:30px 1fr;column-gap:12px}.r15-flow li>span{grid-row:1/3;margin:0}.r15-flow li p{grid-column:2}html body #s1 .entry-actions{grid-template-columns:1fr!important;max-width:100%!important}html body #s1 .entry-actions .entry-btn{font-size:15px!important;min-height:52px!important}.r15-markets .wrap,.r15-flow .wrap{padding:0 20px}}
+
+.r15-technical-details>summary{color:white;font-size:21px;font-weight:700;cursor:pointer;padding:10px 0}.r15-technical-details[open]>summary{margin-bottom:24px}.r15-flow>div>p{line-height:1.65}
+
+/* TREON R17 — shared visual system, 26 October 2026 */
+:root{--r17-navy:#06264d;--r17-ink:#38536b;--r17-teal:#087c79;--r17-mint:#73dbcf;--r17-paper:#f2f6f7;--r17-line:#d6e2e7}
+html{scroll-padding-top:104px}
+body.treon-r17{color:var(--r17-ink);font-family:Inter,Arial,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+body.treon-r17 :is(p,li,dd){text-wrap:pretty}
+body.treon-r17 :is(h1,h2,h3,h4){text-wrap:balance;letter-spacing:-.025em}
+body.treon-r17 :is(img,video,svg){max-width:100%}
+body.treon-r17 :is(button,a,input,textarea,select,summary):focus-visible{outline:3px solid #169e92!important;outline-offset:4px!important}
+body.treon-r17 a{text-underline-offset:4px}
+body.treon-r17 main :is(section,[id]){scroll-margin-top:105px}
+html body.treon-r17>header.treon-unified-header{height:80px!important;padding:0 max(24px,4vw)!important;background:#fff!important;border-bottom:1px solid var(--r17-line)!important;box-shadow:none!important;gap:24px!important}
+html body.treon-r17>header .treon-brand img{width:136px!important;height:auto!important}
+html body.treon-r17>header .treon-main-nav a{font-size:13px!important;letter-spacing:0!important;text-transform:none!important;font-weight:650!important}
+html body.treon-r17>header .treon-header-cta{border-radius:5px!important;background:var(--r17-navy)!important;box-shadow:none!important}
+html body.treon-r17>header select{border:1px solid var(--r17-line)!important;border-radius:5px!important;min-height:42px!important}
+/* A shorter introduction with a real prototype as the dominant image. */
+html body.treon-r17 #s1{background:var(--r17-navy)!important}
+html body.treon-r17 #s1 .entry-main{display:grid!important;grid-template-columns:1fr 1fr!important;min-height:0!important;align-items:stretch!important}
+html body.treon-r17 #s1 .entry-copy{padding:52px max(28px,4vw) 34px!important;min-width:0!important;background:var(--r17-navy)!important}
+html body.treon-r17 #s1 .entry-brand-signature{font-size:10px!important;letter-spacing:.17em!important;color:#bad4e1!important;margin-bottom:14px!important}
+html body.treon-r17 #s1 .entry-kicker{font-size:11px!important;line-height:1.6!important;color:var(--r17-mint)!important;margin:0 0 16px!important;letter-spacing:.025em!important}
+html body.treon-r17 #s1 h1{font-size:clamp(30px,3.2vw,46px)!important;font-weight:650!important;line-height:1.13!important;letter-spacing:-.035em!important;max-width:16ch!important;margin:0!important;color:#fff!important}
+html body.treon-r17 #s1 .entry-rule{width:44px!important;height:3px!important;background:var(--r17-mint)!important;margin:22px 0!important}
+html body.treon-r17 #s1 .entry-copy>p{font-size:16px!important;line-height:1.75!important;max-width:57ch!important;color:#e0ebf2!important;margin:0 0 18px!important}
+html body.treon-r17 #s1 .entry-roleline{font-size:12px!important;line-height:1.7!important;border-color:#32516c!important;padding-top:12px!important}
+html body.treon-r17 #s1 .entry-roleline strong{color:var(--r17-mint)!important}
+html body.treon-r17 #s1 .entry-actions{margin-top:22px!important;max-width:100%!important;gap:12px!important}
+html body.treon-r17 #s1 .entry-actions .entry-btn{min-height:52px!important;border-radius:5px!important;font-size:14px!important;padding:13px 16px!important}
+html body.treon-r17 #s1 .entry-actions .entry-btn.primary{background:var(--r17-mint)!important;border-color:var(--r17-mint)!important;color:var(--r17-navy)!important}
+html body.treon-r17 #s1 .entry-actions .entry-btn.secondary{background:transparent!important;color:#fff!important;border-color:#79a4b5!important}
+html body.treon-r17 #s1 .entry-actions .entry-btn:hover{background:#fff!important;color:var(--r17-navy)!important;border-color:#fff!important}
+html body.treon-r17 #s1 .project-quick-links{margin:20px 0 0!important;gap:14px!important;flex-wrap:wrap!important}
+html body.treon-r17 #s1 .project-quick-links a{font-size:10px!important;letter-spacing:.025em!important;color:#d4e5ee!important}
+html body.treon-r17 #s1 .entry-pillars{margin-top:28px!important;padding-top:20px!important;gap:14px!important;border-color:#32516c!important}
+html body.treon-r17 #s1 .entry-pillars>div{padding:0 10px 0 0!important;gap:8px!important;min-width:0!important}
+html body.treon-r17 #s1 .entry-pillars strong{font-size:10px!important;line-height:1.5!important;color:#fff!important;letter-spacing:.025em!important}
+html body.treon-r17 #s1 .entry-pillars small{font-size:11px!important;line-height:1.55!important;color:#bad4e1!important}
+html body.treon-r17 #s1 .entry-photo{display:grid!important;grid-template-rows:minmax(170px,.7fr) minmax(310px,1.3fr)!important;min-height:0!important;position:relative!important;background:#163e57!important;gap:3px!important}
+html body.treon-r17 #s1 .hero-photo-panel{position:relative!important;min-height:0!important;overflow:hidden!important}
+html body.treon-r17 #s1 .hero-photo-panel img{display:block!important;position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;opacity:1!important;visibility:visible!important}
+html body.treon-r17 #s1 .hero-product img{object-position:center 48%!important}
+html body.treon-r17 #s1 .cirpal-hero-caption{position:absolute!important;left:24px!important;bottom:20px!important;max-width:calc(100% - 48px)!important;padding:10px 14px!important;border:1px solid #6c929e!important;border-radius:5px!important;background:#06264de8!important;color:white!important;font-size:14px!important;line-height:1.5!important;box-shadow:none!important;z-index:2!important}
+html body.treon-r17 #s1 .cirpal-hero-caption span{font-size:11px!important;color:#e0ebf2!important}
+html body.treon-r17 #s1 .warehouse-caption{font-size:12px!important;padding:8px 12px!important}
+/* Consistent section rhythm and a restrained heading scale. */
+html body.treon-r17.treon-home #app>section:not(#s1),html body.treon-r17.treon-home #app>.r17-systems{padding:56px max(24px,4vw)!important;margin:0!important;border-radius:0!important}
+html body.treon-r17.treon-home #app>section> :is(.wrap,.treon-section-wrap,.cirpal-update-inner,.industry-invite-inner){max-width:1160px!important;width:100%!important;padding:0!important;margin:0 auto!important}
+html body.treon-r17.treon-home #app :is(h2,.title,.benefit-title){font-size:clamp(26px,2.7vw,36px)!important;line-height:1.2!important;font-weight:650!important;letter-spacing:-.03em!important}
+html body.treon-r17.treon-home #app :is(h3,h4){line-height:1.35!important}
+html body.treon-r17.treon-home #app>section .lead{font-size:16px!important;line-height:1.75!important}
+html body.treon-r17 .home-paths{background:#f2f6f7!important;border-bottom:1px solid var(--r17-line)!important}
+html body.treon-r17 .home-paths-inner{max-width:1160px!important;margin:auto!important}
+html body.treon-r17 .home-path-grid{gap:16px!important}
+html body.treon-r17 .home-path-grid>a{border:1px solid var(--r17-line)!important;border-radius:7px!important;background:#fff!important;box-shadow:none!important;padding:22px!important}
+html body.treon-r17 .home-path-grid>a:hover{border-color:var(--r17-teal)!important;transform:translateY(-2px)}
+html body.treon-r17 #s2{background:white!important}
+html body.treon-r17 #s2 p{max-width:82ch!important;font-size:16px!important;line-height:1.8!important}
+html body.treon-r17 #project-overview{background:#eef4f6!important;border-block:1px solid var(--r17-line)!important}
+html body.treon-r17 #project-overview .treon-project-grid{gap:18px!important;margin-top:26px!important}
+html body.treon-r17 #project-overview article{background:#fff!important;padding:24px!important;border:1px solid var(--r17-line)!important;border-top:3px solid var(--r17-teal)!important;border-radius:6px!important;box-shadow:none!important}
+html body.treon-r17 #project-overview article:before{display:none!important}
+html body.treon-r17 #project-overview article>span{font-size:11px!important;letter-spacing:.07em!important;color:var(--r17-teal)!important;text-transform:uppercase!important}
+html body.treon-r17 #project-overview article h3{font-size:20px!important;color:var(--r17-navy)!important;margin:10px 0!important}
+html body.treon-r17 #project-overview article p{font-size:14px!important;color:var(--r17-ink)!important;line-height:1.7!important}
+html body.treon-r17 #sbenefits{background:white!important}
+html body.treon-r17 #sbenefits .benefit-head{gap:28px!important;margin-bottom:28px!important}
+html body.treon-r17 #sbenefits .benefit-visual{gap:16px!important}
+html body.treon-r17 #sbenefits .benefit-photo{border:1px solid var(--r17-line)!important;border-radius:6px!important;box-shadow:none!important;background:#f2f6f7!important}
+html body.treon-r17 #sbenefits .benefit-photo img{height:210px!important;object-fit:cover!important}
+html body.treon-r17 #sbenefits .benefit-photo figcaption{padding:18px!important}
+html body.treon-r17 #sbenefits .benefit-photo strong{font-size:12px!important;line-height:1.5!important}
+html body.treon-r17 #sbenefits .r12-machine-diagram{height:210px!important;min-height:0!important;background:#10364f!important;color:#9be4d9!important}
+html body.treon-r17 #sbenefits .r12-machine-diagram svg{height:150px!important}
+html body.treon-r17 .treon-film-panel{border-radius:7px!important;box-shadow:none!important;overflow:hidden!important}
+html body.treon-r17 .treon-film-panel video{display:block!important;aspect-ratio:16/9!important;background:#06264d!important;object-fit:contain!important}
+html body.treon-r17 .r17-systems{display:grid!important;grid-template-columns:1fr 1fr!important;gap:24px!important;background:#eef4f6!important;align-items:start!important}
+html body.treon-r17 .r17-systems>section{margin:0!important;padding:28px!important;background:#fff!important;border:1px solid var(--r17-line)!important;border-radius:7px!important;color:var(--r17-ink)!important;min-width:0!important;height:100%!important}
+html body.treon-r17 .r17-systems>section>div{padding:0!important;width:100%!important;max-width:none!important;margin:0!important}
+html body.treon-r17 .r17-systems h2{font-size:27px!important;color:var(--r17-navy)!important}
+html body.treon-r17 .r17-systems p{font-size:14px!important;line-height:1.75!important;color:var(--r17-ink)!important}
+html body.treon-r17 .r17-systems .cirpal-official-logo{max-width:150px!important;max-height:65px!important;object-fit:contain!important;margin-bottom:18px!important}
+html body.treon-r17 .r17-systems :is(.cirpal-update-link,.gc-cta){color:var(--r17-teal)!important;background:transparent!important;border:0!important;padding:0!important;font-weight:650!important;text-decoration:underline!important}
+html body.treon-r17 .r17-systems .r7-lifecycle ol{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+html body.treon-r17 .r17-systems .r7-lifecycle li{background:#f2f6f7!important;border:1px solid var(--r17-line)!important;border-radius:5px!important;padding:12px!important}
+html body.treon-r17 .r17-systems .r7-lifecycle li:after{display:none!important}
+html body.treon-r17 .r17-systems .r7-lifecycle strong{font-size:12px!important;color:var(--r17-navy)!important}
+html body.treon-r17 .r17-systems .gc-visual img{height:180px!important;width:100%!important;object-fit:cover!important}
+/* Accessible disclosure preserves technical and commercial detail. */
+html body.treon-r17 details{border-radius:6px!important;box-shadow:none!important}
+html body.treon-r17 :is(.r17-partner-detail,.r17-faq-summary){margin-top:24px!important;border:1px solid var(--r17-line)!important;background:#fff!important;border-radius:6px!important;padding:0!important}
+html body.treon-r17 :is(.r17-partner-detail,.r17-faq-summary)>summary{padding:18px 22px!important;color:var(--r17-navy)!important;font-size:16px!important;font-weight:650!important;cursor:pointer!important}
+html body.treon-r17 .r17-detail-content{padding:0 22px 24px!important}
+html body.treon-r17 .r17-detail-content .industry-invite-grid{display:grid!important;grid-template-columns:1fr 1fr!important;gap:24px!important;margin:20px 0!important}
+html body.treon-r17 .r17-detail-content :is(article,.industry-invite-next){background:#f2f6f7!important;color:var(--r17-ink)!important;padding:20px!important;border-radius:5px!important}
+html body.treon-r17 .r17-detail-content h3{font-size:19px!important;color:var(--r17-navy)!important}
+html body.treon-r17 .r17-detail-content p{font-size:14px!important;line-height:1.75!important}
+html body.treon-r17 #sfranchise{background:var(--r17-navy)!important;color:white!important}
+html body.treon-r17 #sfranchise h2{color:#fff!important}
+html body.treon-r17 #sfranchise .r12-role-flow{gap:18px!important}
+html body.treon-r17 #sfranchise .r12-role-flow li{background:#123a59!important;border-color:#31516b!important;border-radius:6px!important}
+html body.treon-r17 #sfranchise .r12-role-flow strong{color:#fff!important}
+html body.treon-r17 #sfranchise .r12-role-flow span{color:#d4e5ee!important}
+html body.treon-r17 #sfranchise .franchise-capacity{display:grid!important;grid-template-columns:1fr 1fr!important;gap:20px!important;padding:24px!important;border:1px solid #41637c!important;background:#113954!important;border-radius:6px!important;float:none!important;width:100%!important;max-width:none!important;margin:26px 0!important}
+html body.treon-r17 #sfranchise .franchise-capacity>div{min-width:0!important}
+html body.treon-r17 #sfranchise .franchise-capacity span{display:block!important;color:#b9d4e2!important;font-size:11px!important;letter-spacing:.05em!important;line-height:1.5!important}
+html body.treon-r17 #sfranchise .franchise-capacity strong{display:block!important;color:var(--r17-mint)!important;font-size:clamp(20px,2.1vw,29px)!important;line-height:1.3!important;margin-top:8px!important}
+html body.treon-r17 #sfranchise .franchise-capacity>p{font-size:12px!important;line-height:1.6!important;color:#d4e5ee!important;margin:0!important}
+html body.treon-r17 #sfranchise .franchise-capacity>a{color:#fff!important;font-size:13px!important;align-self:center!important}
+html body.treon-r17 #sfranchise>.wrap>.r12-details{background:#fff!important;color:var(--r17-ink)!important}
+html body.treon-r17 #sfranchise>.wrap>.r12-details summary{color:var(--r17-navy)!important}
+html body.treon-r17 #sinnovation{background:#fff!important}
+html body.treon-r17 #straction{background:#eef4f6!important}
+html body.treon-r17 .r15-market-grid{gap:16px!important}
+html body.treon-r17 .r15-market{border-radius:6px!important;box-shadow:none!important;padding:24px!important}
+html body.treon-r17 .r15-market h3{font-size:23px!important;line-height:1.3!important}
+html body.treon-r17 .r15-market p{font-size:14px!important;line-height:1.75!important}
+html body.treon-r17 .r15-status{font-size:11px!important;border-radius:4px!important}
+html body.treon-r17 #s15{background:#fff!important}
+html body.treon-r17 .partner-grid{gap:18px!important}
+html body.treon-r17 .partner{border:1px solid var(--r17-line)!important;border-radius:6px!important;box-shadow:none!important;overflow:hidden!important;background:white!important}
+html body.treon-r17 .partner .logo-box{height:100px!important;min-height:100px!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:24px!important;border-bottom:1px solid var(--r17-line)!important;background:#fff!important}
+html body.treon-r17 .partner .logo-box img{max-height:50px!important;max-width:190px!important;width:auto!important;height:auto!important;object-fit:contain!important;filter:none!important}
+html body.treon-r17 .partner .partner-body{padding:22px!important}
+html body.treon-r17 .partner h3{font-size:20px!important;color:var(--r17-navy)!important}
+html body.treon-r17 .partner .role{font-size:13px!important;color:var(--r17-teal)!important;line-height:1.6!important}
+html body.treon-r17 .partner p{font-size:13px!important;color:var(--r17-ink)!important;line-height:1.7!important}
+html body.treon-r17 .treon-supplier-card{border:1px solid var(--r17-line)!important;border-radius:6px!important;background:#f2f6f7!important;box-shadow:none!important}
+html body.treon-r17 .treon-supplier-logo img{max-height:52px!important;max-width:180px!important;object-fit:contain!important}
+html body.treon-r17 .r17-faq-summary>div{padding:0 22px 22px!important}
+html body.treon-r17 #investment-paths{background:#eef4f6!important}
+html body.treon-r17 #s19{background:var(--r17-navy)!important}
+html body.treon-r17 .site-legal-footer{padding:24px max(24px,4vw)!important;background:#041d39!important;color:#d4e5ee!important;font-size:12px!important;line-height:1.8!important}
+html body.treon-r17 .site-legal-footer a{color:#fff!important}
+html body.treon-r17 .treon-language-footer{padding:16px 24px!important;background:#fff!important;border-top:1px solid var(--r17-line)!important;gap:22px!important;font-size:13px!important}
+/* Detail pages share typography, card geometry and readable measures. */
+html body.treon-r17:not(.treon-home) main h1{font-size:clamp(30px,4vw,48px)!important;line-height:1.15!important;max-width:24ch!important;letter-spacing:-.035em!important}
+html body.treon-r17:not(.treon-home) main h2{font-size:clamp(25px,3vw,35px)!important;line-height:1.25!important;letter-spacing:-.025em!important}
+html body.treon-r17:not(.treon-home) main p{line-height:1.8!important}
+html body.treon-r17:not(.treon-home) :is(.image-card,.value-card,.card,.r14-responsibility-column,.r14-metrics>div,.r15-flow li){border-radius:6px!important;box-shadow:none!important}
+html body.treon-r17.treon-request .form-card{border:1px solid var(--r17-line)!important;border-radius:8px!important;box-shadow:none!important}
+html body.treon-r17.treon-request :is(input,textarea){border-radius:5px!important;border-color:#9db4c4!important;font-size:16px!important;min-height:46px!important}
+@media(max-width:1239px){html body.treon-r17>header.treon-unified-header{height:72px!important;gap:16px!important}html body.treon-r17>header .treon-main-nav{top:72px!important}html body.treon-r17 #s1 .entry-copy{padding:36px 28px!important}html body.treon-r17 #s1 h1{font-size:36px!important}html body.treon-r17 #s1 .entry-pillars{display:none!important}html body.treon-r17 #s1 .entry-photo{grid-template-rows:minmax(150px,.6fr) minmax(270px,1.4fr)!important}}
+@media(max-width:900px){html body.treon-r17 #s1 .entry-main{grid-template-columns:1fr!important}html body.treon-r17 #s1 h1{max-width:24ch!important;font-size:40px!important}html body.treon-r17 #s1 .entry-photo{display:grid!important;grid-template-columns:1fr 1fr!important;grid-template-rows:280px!important}html body.treon-r17 #s1 .entry-copy{padding:38px max(24px,5vw)!important}html body.treon-r17 .r17-systems{grid-template-columns:1fr!important}html body.treon-r17 .r17-systems>section{height:auto!important}html body.treon-r17 .r17-systems .r7-lifecycle ol{grid-template-columns:repeat(4,minmax(0,1fr))!important}html body.treon-r17 #sbenefits .benefit-visual{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:600px){html{scroll-padding-top:88px}html body.treon-r17>header.treon-unified-header{padding-inline:18px!important;gap:12px!important}html body.treon-r17>header .treon-brand img{width:112px!important}html body.treon-r17>header select{max-width:96px!important;font-size:12px!important;min-height:40px!important}html body.treon-r17 #s1 .entry-copy{padding:30px 20px!important}html body.treon-r17 #s1 h1{font-size:32px!important;max-width:20ch!important}html body.treon-r17 #s1 .entry-copy>p{font-size:15px!important;line-height:1.7!important}html body.treon-r17 #s1 .entry-roleline{font-size:11px!important}html body.treon-r17 #s1 .entry-brand-signature{font-size:9px!important}html body.treon-r17 #s1 .entry-kicker{font-size:10px!important}html body.treon-r17 #s1 .entry-actions{grid-template-columns:1fr!important}html body.treon-r17 #s1 .entry-photo{display:block!important;height:265px!important;min-height:265px!important}html body.treon-r17 #s1 .hero-warehouse{display:none!important}html body.treon-r17 #s1 .hero-product{display:block!important;height:265px!important}html body.treon-r17 #s1 .cirpal-hero-caption{left:16px!important;bottom:16px!important;max-width:calc(100% - 32px)!important;font-size:12px!important;padding:9px 12px!important}html body.treon-r17 #s1 .cirpal-hero-caption span{font-size:10px!important}html body.treon-r17.treon-home #app>section:not(#s1),html body.treon-r17.treon-home #app>.r17-systems{padding:36px 20px!important}html body.treon-r17 #project-overview .treon-project-grid{grid-template-columns:1fr!important;gap:12px!important}html body.treon-r17 #project-overview article{padding:20px!important}html body.treon-r17 #sbenefits .benefit-head{display:block!important}html body.treon-r17 #sbenefits .benefit-photo img{height:160px!important}html body.treon-r17 #sbenefits .r12-machine-diagram{height:160px!important}html body.treon-r17 #sbenefits .r12-machine-diagram svg{height:110px!important}html body.treon-r17 #sbenefits .benefit-photo figcaption{padding:12px!important}html body.treon-r17 #sbenefits .benefit-photo strong{font-size:10px!important}html body.treon-r17 #sbenefits .benefit-photo span{font-size:12px!important;line-height:1.6!important}html body.treon-r17 .r17-systems>section{padding:22px!important}html body.treon-r17 .r17-systems .r7-lifecycle ol{grid-template-columns:repeat(2,minmax(0,1fr))!important}html body.treon-r17 #sfranchise .franchise-capacity{grid-template-columns:1fr!important;padding:20px!important}html body.treon-r17 #sfranchise .r12-role-flow{grid-template-columns:1fr!important}html body.treon-r17 .r17-detail-content .industry-invite-grid{grid-template-columns:1fr!important}html body.treon-r17 :is(.r17-partner-detail,.r17-faq-summary)>summary{padding:16px!important;font-size:15px!important}html body.treon-r17 .partner .logo-box{height:88px!important;min-height:88px!important}html body.treon-r17 .partner-grid{grid-template-columns:1fr!important}html body.treon-r17 .treon-language-footer{gap:16px!important;font-size:12px!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}body.treon-r17 *,body.treon-r17 *:before,body.treon-r17 *:after{animation:none!important;transition:none!important}}
+@media print{body.treon-r17 details>*{display:block!important}body.treon-r17 header,body.treon-r17 #treon-consent{display:none!important}body.treon-r17 section{break-inside:avoid}body.treon-r17 #s1 .entry-copy{color:#000!important;background:#fff!important}}
+
+@media(max-width:600px){html body.treon-r17 #s1 .entry-roleline{display:none!important}html body.treon-r17 #s1 .entry-rule{margin:18px 0!important}html body.treon-r17 #s1 .entry-copy{padding:26px 20px 24px!important}html body.treon-r17 #s1 .entry-actions{margin-top:18px!important}html body.treon-r17 #s1 .project-quick-links{margin-top:16px!important;row-gap:10px!important}}
+/* Explicit reset for inherited dark panels within the new light systems band. */
+html body.treon-r17 #app .r17-systems #circularenergy .gc-inner{background:transparent!important;border:0!important;border-radius:0!important;padding:0!important;box-shadow:none!important}
+html body.treon-r17 #app .r17-systems #circularenergy .gc-layout{display:flex!important;flex-direction:column!important;gap:20px!important;background:transparent!important;padding:0!important;border:0!important;box-shadow:none!important}
+html body.treon-r17 #app .r17-systems #circularenergy .gc-layout>div{background:transparent!important;padding:0!important;width:100%!important}
+html body.treon-r17 #app .r17-systems #circularenergy h2{color:#06264d!important;font-size:27px!important;line-height:1.25!important;max-width:100%!important;margin:14px 0!important}
+html body.treon-r17 #app .r17-systems #circularenergy :is(p,figcaption){color:#38536b!important}
+html body.treon-r17 #app .r17-systems #circularenergy :is(.gc-kicker,a){color:#087c79!important}
+html body.treon-r17 #app .r17-systems #circularenergy figure{float:none!important;position:static!important;margin:0!important;width:100%!important;max-width:100%!important;background:transparent!important;padding:0!important;order:-1!important}
+html body.treon-r17 #app .r17-systems #circularenergy figure img{height:170px!important;max-height:170px!important;width:100%!important;object-fit:cover!important;border-radius:5px!important}
+html body.treon-r17 #app .r17-systems #circularenergy figcaption{font-size:11px!important;margin-top:8px!important}
+html body.treon-r17 #app .r17-systems #cirpal-platform .r7-lifecycle{background:#f2f6f7!important;border:1px solid #d6e2e7!important;border-radius:6px!important;padding:20px!important}
+html body.treon-r17 #app .r17-systems #cirpal-platform .r7-lifecycle :is(strong,figcaption){color:#06264d!important}
+html body.treon-r17 #app .r17-systems #cirpal-platform .r7-lifecycle li{background:#fff!important}
+html body.treon-r17 #app .r17-systems #cirpal-platform .r7-lifecycle li>span{color:#087c79!important;background:#e0f3ee!important}
+html body.treon-r17 #app .r17-systems #cirpal-platform .r7-lifecycle p{color:#38536b!important}
+html body.treon-r17 #app .r17-systems #circularenergy details{background:#f2f6f7!important;border:1px solid #d6e2e7!important;padding:14px 16px!important;margin-top:20px!important}
+html body.treon-r17 #app .r17-systems #circularenergy details summary{color:#06264d!important;font-size:14px!important;font-weight:650!important;cursor:pointer!important}
+html body.treon-r17 #app .r17-systems #circularenergy details :is(p,span){color:#38536b!important}
+/* Keep explanatory SVGs bounded independently of legacy component rules. */
+html body.treon-r17 #app .r12-icon{display:block!important;width:44px!important;height:44px!important;min-width:44px!important;max-width:44px!important;flex:none!important;color:#087c79!important}
+html body.treon-r17 #app .r12-role-flow{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important;list-style:none!important;padding:0!important;margin:24px 0!important}
+html body.treon-r17 #app .r12-role-flow>li{display:grid!important;grid-template-columns:44px minmax(0,1fr)!important;gap:8px 14px!important;align-content:start!important;padding:22px!important;min-width:0!important;border:1px solid #cddfe9!important;border-top:3px solid #087c79!important;border-radius:6px!important}
+html body.treon-r17 #app .r12-role-flow>li>svg{grid-row:1/3!important}
+html body.treon-r17 #app .r12-role-flow>li>strong{display:block!important;font-size:18px!important;line-height:1.4!important;grid-column:2!important}
+html body.treon-r17 #app .r12-role-flow>li>span{display:block!important;font-size:14px!important;line-height:1.65!important;grid-column:2!important}
+html body.treon-r17 #app #sfranchise .r12-role-flow .r12-icon{color:#73dbcf!important}
+html body.treon-r17 #app #sfranchise .franchise-eyebrow{color:#73dbcf!important}
+@media(max-width:760px){html body.treon-r17 #app .r12-role-flow{grid-template-columns:1fr!important}}
+
+/* R19 compatibility: repair the legacy sections even when old HTML remains in a cache. */
+html body.treon-home #app #sinnovation{background:#fff!important;color:#082c4b!important}
+html body.treon-home #app #sinnovation :is(h2,h3,h4,p,span,strong,small,figcaption){color:#082c4b!important;opacity:1!important}
+html body.treon-home #app #sinnovation :is(.project-status,.proof-action-status,.proof-action-card,.final-royce-figure figcaption){background:#edf3f5!important;border-color:#9eb9c8!important;color:#082c4b!important}
+html body.treon-home #app #sinnovation a{color:#075f5e!important;font-size:18px!important}
+html body.treon-home #app #sinnovation p{font-size:20px!important;line-height:1.75!important}
+html body.treon-home #app #s15{background:#fff!important}
+html body.treon-home #app #s15 :is(h2,.lead){color:#082c4b!important;opacity:1!important}
+html body.treon-home #app #s15 :is(.partner,.partner-body){background:#fff!important;color:#082c4b!important}
+html body.treon-home #app #s15 .partner-body :is(h3,p,.role,a,span){color:#082c4b!important;font-size:18px!important;line-height:1.65!important}
+html body.treon-home #app #investment-paths{background:#edf3f5!important}
+html body.treon-home #app #investment-paths :is(h2,h3,p,a){color:#082c4b!important;opacity:1!important}
+html body.treon-home #app #investment-paths article{background:#fff!important;border:1px solid #9eb9c8!important}
+html body.treon-home #app #investment-paths p{font-size:20px!important;line-height:1.75!important}
+html body.treon-home #app :is(#sinnovation,#s15,#investment-paths) h2{font-size:clamp(30px,3vw,42px)!important;line-height:1.2!important}
