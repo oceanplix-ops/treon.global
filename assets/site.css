@@ -4331,3 +4331,30 @@ a,button{-webkit-tap-highlight-color:transparent}
 
 /* V58: clear country partner path and keyboard access */
 .skip-link{position:absolute;left:12px;top:-100px;z-index:9999;background:#fff;color:#06264d;padding:10px 16px;border-radius:6px;font-weight:700}.skip-link:focus{top:10px}a:focus-visible,button:focus-visible{outline:3px solid #f4bb3d!important;outline-offset:3px}.franchise-country-link{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;margin-top:14px;padding:15px 21px;background:#06264d;color:white!important;border-radius:9px;text-decoration:none;font-weight:800;min-height:48px;box-shadow:0 8px 18px rgba(6,38,77,.16)}.franchise-country-link:hover{background:#0a4976}.franchise-country-link span{font-size:21px;line-height:1}@media(max-width:700px){.franchise-country-link{width:100%}}
+
+
+/* R25: Mobile readability — closing/contact section and process graphics */
+@media (max-width: 767px) {
+  html,body { max-width:100%; overflow-x:clip; }
+  #s19, .treon-contact-page { overflow:visible; }
+  #s19 .wrap, #s19 .treon-contact-grid, #s19 .treon-contact-copy,
+  #s19 .treon-contact-actions, #s19 .treon-contact-visual { min-width:0; max-width:100%; }
+  #s19 .treon-contact-grid { display:grid!important; grid-template-columns:minmax(0,1fr)!important; gap:24px!important; }
+  #s19 .treon-contact-copy { padding:0!important; }
+  #s19 .title { font-size:clamp(27px,7vw,36px)!important; line-height:1.17!important; letter-spacing:-.025em; overflow-wrap:break-word; }
+  #s19 .lead, #s19 p, #s19 .treon-contact-address span { font-size:16px!important; line-height:1.65!important; overflow-wrap:anywhere; }
+  #s19 .market-kicker, #s19 small { font-size:12px!important; line-height:1.4!important; letter-spacing:.04em!important; }
+  #s19 .treon-contact-actions { display:grid!important; grid-template-columns:minmax(0,1fr)!important; gap:12px!important; width:100%; }
+  #s19 .treon-contact-action { display:flex!important; align-items:center!important; width:100%!important; min-width:0!important; min-height:68px; padding:15px!important; gap:12px!important; }
+  #s19 .treon-contact-action span { min-width:0; }
+  #s19 .treon-contact-action strong { display:block; font-size:16px!important; line-height:1.4!important; white-space:normal!important; overflow-wrap:anywhere!important; }
+  #s19 .treon-contact-address { width:100%; padding:18px!important; }
+  #s19 .treon-contact-visual { width:100%; height:auto!important; aspect-ratio:auto!important; }
+  #s19 .treon-contact-visual img { display:block; width:100%!important; height:auto!important; max-height:none!important; object-fit:contain!important; }
+  .site-legal-footer .wrap { display:flex!important; flex-direction:column!important; align-items:flex-start!important; gap:14px!important; min-width:0; padding:22px 18px!important; }
+  .site-legal-footer .wrap span, .site-legal-footer nav a { font-size:14px!important; line-height:1.6!important; overflow-wrap:anywhere; }
+  .site-legal-footer nav { display:flex!important; flex-wrap:wrap!important; gap:14px!important; }
+  /* Existing diagrams stay visible and can be scrolled instead of illegibly shrunk */
+  .process-graphic, .process-diagram, .flow-diagram, .diagram, .infographic { max-width:100%; }
+  .process-graphic img, .process-diagram img, .flow-diagram img, .diagram img, .infographic img { width:100%; height:auto; object-fit:contain; }
+}
